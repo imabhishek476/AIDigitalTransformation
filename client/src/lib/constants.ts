@@ -10,8 +10,42 @@ import {
   Github,
   Mail,
   FileText,
-  Share2
+  Share2,
+  Building2
 } from 'lucide-react';
+
+export const CLIENT_LOGOS = [
+  {
+    name: 'RetailPlus',
+    logoUrl: 'https://placehold.co/200x80/137dc5/ffffff?text=RetailPlus',
+    industry: 'E-commerce'
+  },
+  {
+    name: 'TechSolutions',
+    logoUrl: 'https://placehold.co/200x80/ff6b35/ffffff?text=TechSolutions',
+    industry: 'SaaS'
+  },
+  {
+    name: 'MedCore',
+    logoUrl: 'https://placehold.co/200x80/3a9ad9/ffffff?text=MedCore',
+    industry: 'Healthcare'
+  },
+  {
+    name: 'GlobalFinance',
+    logoUrl: 'https://placehold.co/200x80/1b365d/ffffff?text=GlobalFinance',
+    industry: 'Finance'
+  },
+  {
+    name: 'GreenEnergy',
+    logoUrl: 'https://placehold.co/200x80/00cfc8/ffffff?text=GreenEnergy',
+    industry: 'Energy'
+  },
+  {
+    name: 'FoodHub',
+    logoUrl: 'https://placehold.co/200x80/ff6b35/ffffff?text=FoodHub',
+    industry: 'Food & Beverage'
+  }
+];
 
 export const SERVICES = [
   {

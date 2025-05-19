@@ -1,4 +1,5 @@
 import { TestimonialCard } from '@/components/ui/testimonial-card';
+import { ClientLogoCarousel } from '@/components/ui/client-logo-carousel';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { TESTIMONIALS } from '@/lib/constants';
@@ -25,7 +26,7 @@ const Testimonials = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {TESTIMONIALS.map((testimonial, index) => (
             <motion.div key={index} variants={fadeInUp}>
@@ -38,6 +39,20 @@ const Testimonials = () => {
               />
             </motion.div>
           ))}
+        </motion.div>
+        
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-xl md:text-2xl font-bold mb-2">Trusted by Innovative Companies</h3>
+            <div className="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+          </div>
+          <ClientLogoCarousel />
         </motion.div>
       </div>
     </section>
