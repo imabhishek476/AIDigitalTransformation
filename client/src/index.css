@@ -4,46 +4,46 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 215 50% 19%; /* Midnight Blue #112d4e */
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215 50% 30%;
+  --foreground: 214 55% 23%; /* Deep Navy #1B365D */
+  --muted: 0 0% 92%;  /* Soft Gray #EAEAEA */
+  --muted-foreground: 214 45% 33%;
   --popover: 0 0% 100%;
-  --popover-foreground: 215 50% 19%;
+  --popover-foreground: 214 55% 23%;
   --card: 0 0% 100%;
-  --card-foreground: 215 50% 19%;
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --primary: 207 79% 42%; /* True Blue #137dc5 */
+  --card-foreground: 214 55% 23%;
+  --border: 0 0% 92%;
+  --input: 0 0% 92%;
+  --primary: 203 70% 54%; /* Tech Blue #3A9AD9 */
   --primary-foreground: 210 40% 98%;
-  --secondary: 177 100% 41%; /* Aquamarine #00cfc8 */
-  --secondary-foreground: 215 50% 19%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 215 50% 19%;
+  --secondary: 14 100% 60%; /* Vibrant Orange #FF6B35 */
+  --secondary-foreground: 214 55% 23%;
+  --accent: 14 100% 60%; /* Vibrant Orange #FF6B35 */
+  --accent-foreground: 214 55% 23%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --ring: 215 20.2% 65.1%;
+  --ring: 214 55% 23%;
   --radius: 0.5rem;
 }
   .dark {
-  --background: 215 50% 19%; /* Midnight Blue #112d4e */
-  --foreground: 210 40% 98%;
-  --muted: 217 33% 17%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --popover: 215 50% 19%;
-  --popover-foreground: 210 40% 98%;
-  --card: 215 50% 19%;
-  --card-foreground: 210 40% 98%;
-  --border: 217 33% 17%;
-  --input: 217 33% 17%;
-  --primary: 207 79% 42%; /* True Blue #137dc5 */
-  --primary-foreground: 210 40% 98%;
-  --secondary: 177 100% 41%; /* Aquamarine #00cfc8 */
-  --secondary-foreground: 210 40% 98%;
-  --accent: 177 100% 41%;
-  --accent-foreground: 215 50% 19%;
+  --background: 214 55% 23%; /* Deep Navy #1B365D */
+  --foreground: 0 0% 92%; /* Soft Gray #EAEAEA */
+  --muted: 214 30% 33%;
+  --muted-foreground: 0 0% 85%;
+  --popover: 214 55% 23%;
+  --popover-foreground: 0 0% 92%;
+  --card: 214 55% 23%;
+  --card-foreground: 0 0% 92%;
+  --border: 214 30% 33%;
+  --input: 214 30% 33%;
+  --primary: 203 70% 54%; /* Tech Blue #3A9AD9 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 14 100% 60%; /* Vibrant Orange #FF6B35 */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 14 100% 60%;
+  --accent-foreground: 0 0% 100%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 212.7 26.8% 83.9%;
+  --ring: 0 0% 92%;
   --radius: 0.5rem;
   }
 
