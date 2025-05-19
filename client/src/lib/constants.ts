@@ -7,7 +7,10 @@ import {
   Users,
   Linkedin,
   Twitter,
-  Github
+  Github,
+  Mail,
+  FileText,
+  Share2
 } from 'lucide-react';
 
 export const SERVICES = [
@@ -34,6 +37,42 @@ export const SERVICES = [
       'Technical SEO implementation'
     ],
     learnMoreColor: 'text-secondary'
+  },
+  {
+    icon: Share2,
+    iconColor: 'text-primary',
+    title: 'Social Media Management',
+    description: 'Strategic social media management that builds your brand presence, engages your audience, and drives meaningful business results.',
+    features: [
+      'Platform-specific strategy development',
+      'Content calendar & publishing',
+      'Community management & engagement'
+    ],
+    learnMoreColor: 'text-primary'
+  },
+  {
+    icon: FileText,
+    iconColor: 'text-secondary',
+    title: 'Content Creation',
+    description: 'Professional, SEO-optimized content that resonates with your audience, establishes authority, and drives conversion.',
+    features: [
+      'Blog posts & articles',
+      'Case studies & whitepapers',
+      'Video & multimedia content'
+    ],
+    learnMoreColor: 'text-secondary'
+  },
+  {
+    icon: Mail,
+    iconColor: 'text-accent',
+    title: 'Email Marketing',
+    description: 'Targeted email campaigns that nurture leads, build customer relationships, and boost conversions with personalized messaging.',
+    features: [
+      'Campaign strategy & automation',
+      'List segmentation & growth',
+      'A/B testing & optimization'
+    ],
+    learnMoreColor: 'text-accent'
   },
   {
     icon: BarChart,
