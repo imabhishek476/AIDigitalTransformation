@@ -1,29 +1,25 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Please enter a valid email address'),
-  company: z.string().min(1, 'Company name is required'),
-  service: z.string().min(1, 'Please select a service'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission endpoint
   app.post('/api/contact', async (req, res) => {
     try {
-      // Validate the request body
-      const validatedData = contactFormSchema.parse(req.body);
+      // Validate the request body using our schema
+      const validatedData = insertContactSchema.parse(req.body);
       
-      // In a real app, you might want to store this in the database
-      // or send it via email
-      console.log('Contact form submission:', validatedData);
+      // Store in the database
+      const submission = await storage.createContactSubmission(validatedData);
       
-      // For now, we'll just return a success response
-      res.status(200).json({ success: true, message: 'Contact form submitted successfully' });
+      // Return success response
+      res.status(200).json({ 
+        success: true, 
+        message: 'Contact form submitted successfully',
+        data: submission
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(400).json({
@@ -37,6 +33,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       return res.status(500).json({
         success: false,
         message: 'Internal server error'
+      });
+    }
+  });
+
+  // Get all contact submissions (you can add authentication to this later)
+  app.get('/api/contact-submissions', async (req, res) => {
+    try {
+      const submissions = await storage.getContactSubmissions();
+      res.status(200).json(submissions);
+    } catch (error) {
+      console.error('Error fetching contact submissions:', error);
+      res.status(500).json({
+        success: false,
+        message: 'Failed to retrieve contact submissions'
       });
     }
   });
