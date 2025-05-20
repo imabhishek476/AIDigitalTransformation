@@ -29,7 +29,7 @@ const botResponses = [
   },
   {
     trigger: ["tomorrow", "next week", "monday", "tuesday", "wednesday", "thursday", "friday"],
-    response: "Great! I've checked Dr. Johnson's availability and can offer you an appointment at 10:00 AM or 2:30 PM. Which would you prefer?"
+    response: "I've checked Dr. Johnson's availability and can offer you an appointment at 10:00 AM or 2:30 PM. Which would you prefer?"
   },
   {
     trigger: ["morning", "10", "10:00", "10am"],
@@ -41,31 +41,51 @@ const botResponses = [
   },
   {
     trigger: ["prescription", "refill", "medication"],
-    response: "I can help with prescription refills. Please provide your name, date of birth, and the medication you need refilled."
+    response: "I can help with prescription refills. For security, I'll need to verify your identity through our secure portal. Would you like me to send you a secure verification link to your registered email or phone number?"
   },
   {
-    trigger: ["john", "jane", "smith", "doe"],
-    response: "Thank you for that information. I've submitted your refill request for approval. You should receive a notification when it's ready for pickup, usually within 24 hours. Can I help with anything else?"
+    trigger: ["verify", "verification", "secure", "email", "phone"],
+    response: "Great! I've sent a secure verification link to your registered contact information. Once verified, you can safely submit your refill request through our HIPAA-compliant system. For your privacy, never share personal health information in this chat."
   },
   {
-    trigger: ["symptom", "pain", "fever", "headache", "cough"],
-    response: "I'm sorry to hear you're not feeling well. Based on your symptoms, I recommend scheduling a telehealth appointment so a doctor can properly assess your condition. Would you like me to help schedule that?"
+    trigger: ["test", "lab", "results", "labs"],
+    response: "Your lab results are available in our secure patient portal. Due to privacy regulations, I can't discuss specific results here, but I can guide you to access them securely. Would you like me to send instructions to view your results in the patient portal?"
+  },
+  {
+    trigger: ["portal", "access", "login"],
+    response: "To access your secure patient portal: 1) Visit medcare.portal.com 2) Login with your credentials 3) Click 'Lab Results' in the dashboard. Need help logging in? I can connect you with our technical support team."
   },
   {
     trigger: ["insurance", "coverage", "policy"],
-    response: "We accept most major insurance plans including BlueCross, Aetna, Cigna, and Medicare. Would you like me to check if your specific plan is covered?"
+    response: "We accept most major insurance plans including BlueCross, Aetna, Cigna, and Medicare. For personalized coverage information, I can help you securely submit your insurance details through our verification system. Would you like to proceed with insurance verification?"
   },
   {
-    trigger: ["thank", "thanks"],
-    response: "You're welcome! If you have any other questions, feel free to ask. Have a great day!"
+    trigger: ["forms", "paperwork", "registration"],
+    response: "I can help you complete your registration paperwork digitally before your visit to save time! Would you like me to send a secure link to our online registration forms? They're HIPAA-compliant and will save you time in the waiting room."
+  },
+  {
+    trigger: ["telehealth", "virtual", "video"],
+    response: "Our telehealth services provide convenient access to healthcare from home. I can help you schedule a virtual appointment and send instructions for connecting to our secure video platform. Would you like to schedule a telehealth consultation?"
   },
   {
     trigger: ["hours", "open", "close"],
     response: "Our clinic is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 1:00 PM. We're closed on Sundays and holidays."
   },
   {
-    trigger: ["cost", "price", "fee"],
-    response: "The cost of appointments varies based on your insurance and the type of visit. For self-pay patients, a standard consultation starts at $120. Would you like to speak with a billing specialist for more details?"
+    trigger: ["directions", "location", "address", "parking"],
+    response: "Our clinic is located at 123 Health Avenue. We have free parking in the adjacent garage. Would you like me to send you detailed directions from your location or information about public transportation options?"
+  },
+  {
+    trigger: ["reminder", "notification", "alert"],
+    response: "I can set up customized appointment reminders for you. Would you prefer text, email, or phone call reminders? You can also specify how far in advance you'd like to be reminded about upcoming appointments."
+  },
+  {
+    trigger: ["cancel", "reschedule", "change appointment"],
+    response: "I understand you need to modify your appointment. Our policy allows changes up to 24 hours before your scheduled time without any fee. Would you like to reschedule or cancel your current appointment?"
+  },
+  {
+    trigger: ["thank", "thanks"],
+    response: "You're welcome! If you have any other questions, feel free to ask. Have a great day!"
   }
 ];
 
@@ -103,7 +123,15 @@ export function AIChatbotDemo() {
         delay: 5000
       },
       {
-        message: "Also, can you tell me what your hours are?",
+        message: "Can I complete my registration forms before my visit?",
+        delay: 7000
+      },
+      {
+        message: "I'd also like to see my recent lab results",
+        delay: 7000
+      },
+      {
+        message: "Great! Can you set up an appointment reminder for me?",
         delay: 7000
       },
       {
