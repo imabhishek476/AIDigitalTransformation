@@ -33,15 +33,15 @@ const botResponses = [
   },
   {
     trigger: ["don't have a preference", "earliest", "available", "works for me"],
-    response: "The earliest available appointment is with Dr. Smith on Tuesday at 10 AM. Does that work for you?"
+    response: "The earliest available appointment is with Dr. Patel on Tuesday at 10 AM. Does that work for you?"
   },
   {
     trigger: ["meeting", "later", "later in the day", "can we do it later"],
-    response: "No problem! Dr. Smith has an opening at 2 PM on the same day. Would that be better?"
+    response: "No problem! Dr. Patel has an opening at 2 PM on the same day. Would that be better?"
   },
   {
     trigger: ["yes", "perfectly", "works perfectly", "2 pm works"],
-    response: "Great! I've scheduled your appointment with Dr. Smith for Tuesday at 2 PM. Is there anything else I can help you with?"
+    response: "Great! I've scheduled your appointment with Dr. Patel for Tuesday at 2 PM. Is there anything else I can help you with?"
   },
   {
     trigger: ["no", "that's all", "thank you", "thanks"],
