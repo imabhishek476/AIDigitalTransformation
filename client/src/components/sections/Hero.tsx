@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { StatsCard } from '@/components/ui/stats-card';
+import { AIChatbotDemo } from '@/components/ui/ai-chatbot-demo';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { useState } from 'react';
 
 const stats = [
   { value: '250+', label: 'Clients Transformed' },
@@ -11,6 +13,8 @@ const stats = [
 ];
 
 const Hero = () => {
+  const [showChatDemo, setShowChatDemo] = useState(false);
+  
   const scrollToSection = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -37,7 +41,7 @@ const Hero = () => {
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
               <Button
                 size="lg"
                 onClick={() => scrollToSection('#contact')}
@@ -54,17 +58,41 @@ const Hero = () => {
                 Explore Services
               </Button>
             </div>
+            <div>
+              <Button
+                variant="link"
+                onClick={() => setShowChatDemo(!showChatDemo)}
+                className="flex items-center text-secondary"
+              >
+                {showChatDemo ? 'Hide AI Chatbot Demo' : 'Watch AI Chatbot Demo'} 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 h-4 w-4">
+                  {showChatDemo 
+                    ? <polyline points="18 15 12 9 6 15"></polyline>
+                    : <polyline points="6 9 12 15 18 9"></polyline>
+                  }
+                </svg>
+              </Button>
+            </div>
           </motion.div>
           
           <motion.div 
             variants={fadeInUp}
             className="md:w-1/2"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
-              alt="Digital transformation team meeting" 
-              className="rounded-xl shadow-xl w-full h-auto" 
-            />
+            {showChatDemo ? (
+              <div className="rounded-xl overflow-hidden shadow-xl">
+                <div className="bg-primary p-3 text-white text-sm">
+                  <span className="font-semibold">See AI in action:</span> Medical practice patient scheduling chatbot
+                </div>
+                <AIChatbotDemo />
+              </div>
+            ) : (
+              <img 
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
+                alt="Digital transformation team meeting" 
+                className="rounded-xl shadow-xl w-full h-auto" 
+              />
+            )}
           </motion.div>
         </motion.div>
         
