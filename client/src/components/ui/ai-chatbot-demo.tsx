@@ -149,9 +149,12 @@ export function AIChatbotDemo() {
   const handleUserMessage = (text: string) => {
     if (!text.trim()) return;
     
+    // Generate a unique ID
+    const timestamp = new Date().getTime();
+    
     // Add user message
     const newUserMessage: Message = {
-      id: messages.length + 1,
+      id: timestamp,
       content: text,
       sender: 'user',
       timestamp: new Date()
@@ -167,7 +170,7 @@ export function AIChatbotDemo() {
       const botResponse = getBotResponse(text);
       
       const newBotMessage: Message = {
-        id: messages.length + 2,
+        id: timestamp + 1, // Ensure unique ID
         content: botResponse,
         sender: 'bot',
         timestamp: new Date()

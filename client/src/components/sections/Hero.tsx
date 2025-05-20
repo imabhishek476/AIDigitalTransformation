@@ -3,7 +3,7 @@ import { StatsCard } from '@/components/ui/stats-card';
 import { AIChatbotDemo } from '@/components/ui/ai-chatbot-demo';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 const stats = [
   { value: '250+', label: 'Clients Transformed' },
@@ -14,6 +14,7 @@ const stats = [
 
 const Hero = () => {
   const [showChatDemo, setShowChatDemo] = useState(false);
+  const demoRef = useRef<HTMLDivElement>(null);
   
   const scrollToSection = (id: string) => {
     const element = document.querySelector(id);
@@ -22,9 +23,44 @@ const Hero = () => {
     }
   };
 
+  const toggleChatDemo = () => {
+    setShowChatDemo(!showChatDemo);
+  };
+
   return (
     <section className="pt-28 pb-20 bg-gradient-to-br from-primary/5 to-secondary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Chat Demo Modal */}
+        {showChatDemo && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={toggleChatDemo}>
+            <div 
+              ref={demoRef}
+              onClick={(e) => e.stopPropagation()} 
+              className="bg-white rounded-xl shadow-2xl w-full max-w-xl overflow-hidden"
+            >
+              <div className="bg-primary p-3 text-white flex justify-between items-center">
+                <div>
+                  <span className="font-semibold">Medical Practice AI Assistant</span>
+                  <p className="text-xs opacity-80">See how AI can transform patient scheduling</p>
+                </div>
+                <button 
+                  onClick={toggleChatDemo}
+                  className="text-white hover:text-white/80 transition-colors"
+                  aria-label="Close demo"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+              <div className="h-[600px] max-h-[80vh]">
+                <AIChatbotDemo />
+              </div>
+            </div>
+          </div>
+        )}
+      
         <motion.div 
           variants={staggerContainer}
           initial="hidden"
@@ -61,16 +97,17 @@ const Hero = () => {
             <div>
               <Button
                 variant="link"
-                onClick={() => setShowChatDemo(!showChatDemo)}
-                className="flex items-center text-secondary"
+                onClick={toggleChatDemo}
+                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group"
               >
-                {showChatDemo ? 'Hide AI Chatbot Demo' : 'Watch AI Chatbot Demo'} 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="ml-2 h-4 w-4">
-                  {showChatDemo 
-                    ? <polyline points="18 15 12 9 6 15"></polyline>
-                    : <polyline points="6 9 12 15 18 9"></polyline>
-                  }
-                </svg>
+                <span className="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                  </svg>
+                  See AI Chatbot Demo
+                </span>
+                <span className="ml-1 inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
               </Button>
             </div>
           </motion.div>
@@ -79,20 +116,24 @@ const Hero = () => {
             variants={fadeInUp}
             className="md:w-1/2"
           >
-            {showChatDemo ? (
-              <div className="rounded-xl overflow-hidden shadow-xl">
-                <div className="bg-primary p-3 text-white text-sm">
-                  <span className="font-semibold">See AI in action:</span> Medical practice patient scheduling chatbot
-                </div>
-                <AIChatbotDemo />
-              </div>
-            ) : (
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
               <img 
                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
                 alt="Digital transformation team meeting" 
-                className="rounded-xl shadow-xl w-full h-auto" 
+                className="w-full h-auto" 
               />
-            )}
+              <button
+                onClick={toggleChatDemo}
+                className="absolute inset-0 bg-black/30 flex items-center justify-center group hover:bg-black/40 transition-colors"
+              >
+                <div className="bg-white/90 p-3 rounded-full group-hover:scale-110 transition-transform">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+                <span className="sr-only">Play AI Chatbot Demo</span>
+              </button>
+            </div>
           </motion.div>
         </motion.div>
         
