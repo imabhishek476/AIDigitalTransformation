@@ -21,71 +21,31 @@ const initialMessages: Message[] = [
   }
 ];
 
-// Sample responses for the bot
+// Sample responses for the bot - these are predetermined to match the exact flow from the script
 const botResponses = [
   {
-    trigger: ["appointment", "schedule", "book"],
-    response: "I'd be happy to help you schedule an appointment. What day and time works best for you?"
+    trigger: ["hi,", "hello", "hey", "appointment", "schedule"],
+    response: "Great! I can help with that. What type of appointment are you looking to schedule?"
   },
   {
-    trigger: ["tomorrow", "next week", "monday", "tuesday", "wednesday", "thursday", "friday"],
-    response: "I've checked Dr. Johnson's availability and can offer you an appointment at 10:00 AM or 2:30 PM. Which would you prefer?"
+    trigger: ["dermatologist", "skin", "derm"],
+    response: "Got it. We have several dermatologists available. Do you have a preferred doctor or should I find the earliest available appointment for you?"
   },
   {
-    trigger: ["morning", "10", "10:00", "10am"],
-    response: "Perfect! I've scheduled your appointment with Dr. Johnson for tomorrow at 10:00 AM. You'll receive a confirmation text shortly. Is there anything else I can help you with?"
+    trigger: ["don't have a preference", "earliest", "available", "works for me"],
+    response: "The earliest available appointment is with Dr. Smith on Tuesday at 10 AM. Does that work for you?"
   },
   {
-    trigger: ["afternoon", "2", "2:30", "2:30pm"],
-    response: "Perfect! I've scheduled your appointment with Dr. Johnson for tomorrow at 2:30 PM. You'll receive a confirmation text shortly. Is there anything else I can help you with?"
+    trigger: ["meeting", "later", "later in the day", "can we do it later"],
+    response: "No problem! Dr. Smith has an opening at 2 PM on the same day. Would that be better?"
   },
   {
-    trigger: ["prescription", "refill", "medication"],
-    response: "I can help with prescription refills. For security, I'll need to verify your identity through our secure portal. Would you like me to send you a secure verification link to your registered email or phone number?"
+    trigger: ["yes", "perfectly", "works perfectly", "2 pm works"],
+    response: "Great! I've scheduled your appointment with Dr. Smith for Tuesday at 2 PM. Is there anything else I can help you with?"
   },
   {
-    trigger: ["verify", "verification", "secure", "email", "phone"],
-    response: "Great! I've sent a secure verification link to your registered contact information. Once verified, you can safely submit your refill request through our HIPAA-compliant system. For your privacy, never share personal health information in this chat."
-  },
-  {
-    trigger: ["test", "lab", "results", "labs"],
-    response: "Your lab results are available in our secure patient portal. Due to privacy regulations, I can't discuss specific results here, but I can guide you to access them securely. Would you like me to send instructions to view your results in the patient portal?"
-  },
-  {
-    trigger: ["portal", "access", "login"],
-    response: "To access your secure patient portal: 1) Visit medcare.portal.com 2) Login with your credentials 3) Click 'Lab Results' in the dashboard. Need help logging in? I can connect you with our technical support team."
-  },
-  {
-    trigger: ["insurance", "coverage", "policy"],
-    response: "We accept most major insurance plans including BlueCross, Aetna, Cigna, and Medicare. For personalized coverage information, I can help you securely submit your insurance details through our verification system. Would you like to proceed with insurance verification?"
-  },
-  {
-    trigger: ["forms", "paperwork", "registration"],
-    response: "I can help you complete your registration paperwork digitally before your visit to save time! Would you like me to send a secure link to our online registration forms? They're HIPAA-compliant and will save you time in the waiting room."
-  },
-  {
-    trigger: ["telehealth", "virtual", "video"],
-    response: "Our telehealth services provide convenient access to healthcare from home. I can help you schedule a virtual appointment and send instructions for connecting to our secure video platform. Would you like to schedule a telehealth consultation?"
-  },
-  {
-    trigger: ["hours", "open", "close"],
-    response: "Our clinic is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturday from 9:00 AM to 1:00 PM. We're closed on Sundays and holidays."
-  },
-  {
-    trigger: ["directions", "location", "address", "parking"],
-    response: "Our clinic is located at 123 Health Avenue. We have free parking in the adjacent garage. Would you like me to send you detailed directions from your location or information about public transportation options?"
-  },
-  {
-    trigger: ["reminder", "notification", "alert"],
-    response: "I can set up customized appointment reminders for you. Would you prefer text, email, or phone call reminders? You can also specify how far in advance you'd like to be reminded about upcoming appointments."
-  },
-  {
-    trigger: ["cancel", "reschedule", "change appointment"],
-    response: "I understand you need to modify your appointment. Our policy allows changes up to 24 hours before your scheduled time without any fee. Would you like to reschedule or cancel your current appointment?"
-  },
-  {
-    trigger: ["thank", "thanks"],
-    response: "You're welcome! If you have any other questions, feel free to ask. Have a great day!"
+    trigger: ["no", "that's all", "thank you", "thanks"],
+    response: "You're welcome! Have a great day and we'll see you on Tuesday at 2 PM."
   }
 ];
 
@@ -115,28 +75,28 @@ export function AIChatbotDemo() {
     
     const demoScript = [
       {
-        message: "I'd like to schedule an appointment for tomorrow",
+        message: "Hi, I need to schedule an appointment.",
         delay: 1000
       },
       {
-        message: "The morning appointment at 10am works great for me",
+        message: "I need to see a dermatologist.",
         delay: 5000
       },
       {
-        message: "Can I complete my registration forms before my visit?",
+        message: "I don't have a preference. The earliest available appointment works for me.",
+        delay: 6000
+      },
+      {
+        message: "Actually, I just remembered I have a meeting at that time. Can we do it later in the day?",
         delay: 7000
       },
       {
-        message: "I'd also like to see my recent lab results",
-        delay: 7000
+        message: "Yes, 2 PM works perfectly.",
+        delay: 6000
       },
       {
-        message: "Great! Can you set up an appointment reminder for me?",
-        delay: 7000
-      },
-      {
-        message: "Thank you!",
-        delay: 7000
+        message: "No, that's all. Thank you!",
+        delay: 6000
       }
     ];
     
