@@ -77,11 +77,11 @@ const Hero = () => {
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
+            <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 mb-8">
               <Button
                 size="lg"
                 onClick={() => scrollToSection('#contact')}
-                className="text-center"
+                className="text-center py-6 px-8 text-lg font-medium bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 rounded-lg"
               >
                 Start Your Transformation
               </Button>
@@ -89,7 +89,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('#services')}
-                className="text-center border-primary text-primary hover:bg-primary/5"
+                className="text-center py-6 px-8 text-lg font-medium border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 shadow-md hover:shadow-lg rounded-lg"
               >
                 Explore Services
               </Button>
