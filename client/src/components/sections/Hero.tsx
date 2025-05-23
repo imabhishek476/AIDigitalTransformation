@@ -75,7 +75,7 @@ const Hero = () => {
               Transform Your <span className="text-primary">Digital Presence</span> with AI-Powered Solutions
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
-              We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
+              Your Trusted Partner in Navigating the New Era of Digital Transformation.
             </p>
             <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 mb-8">
               <Button
