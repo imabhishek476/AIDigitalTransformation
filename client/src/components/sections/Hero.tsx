@@ -40,7 +40,7 @@ const Hero = () => {
             >
               <div className="bg-primary p-3 text-white flex justify-between items-center">
                 <div>
-                  <span className="font-semibold">Medical Practice AI Assistant</span>
+                  <span className="font-semibold">NexiFront AI Assistant</span>
                   <p className="text-xs opacity-80">See how AI can transform patient scheduling</p>
                 </div>
                 <button 

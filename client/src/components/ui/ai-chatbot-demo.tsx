@@ -15,7 +15,7 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: 1,
-    content: "Hello! Welcome to MedCare AI Assistant. How can I help you today?",
+    content: "Hello! Welcome to NexiFront AI Assistant. How can I help you today?",
     sender: "bot",
     timestamp: new Date()
   }
