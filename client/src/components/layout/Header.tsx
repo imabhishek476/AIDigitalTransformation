@@ -44,7 +44,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-primary text-2xl font-bold">Nexus<span className="text-secondary">Digital</span></span>
+            <span className="text-primary text-2xl font-bold">Nexi<span className="text-secondary">Front</span></span>
           </Link>
           
           <nav className="hidden md:flex space-x-10">
