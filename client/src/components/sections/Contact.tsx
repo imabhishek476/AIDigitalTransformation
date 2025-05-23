@@ -32,6 +32,7 @@ const formSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   company: z.string().min(1, 'Company name is required'),
   service: z.string().min(1, 'Please select a service'),
+  customService: z.string().optional(),
   message: z.string().min(10, 'Message must be at least 10 characters'),
 });
 
@@ -48,20 +49,32 @@ const Contact = () => {
       email: '',
       company: '',
       service: '',
+      customService: '',
       message: '',
     },
   });
+  
+  // State for showing custom service input
+  const [showCustomService, setShowCustomService] = useState(false);
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      await apiRequest('POST', '/api/contact', data);
+      // If user selected custom service, include that in the message
+      let submissionData = {...data};
+      
+      if (data.service === 'custom' && data.customService) {
+        submissionData.message = `Custom Service Requested: ${data.customService}\n\n${data.message}`;
+      }
+      
+      await apiRequest('POST', '/api/contact', submissionData);
       toast({
         title: "Message sent successfully!",
         description: "We'll get back to you as soon as possible.",
         variant: "default",
       });
       form.reset();
+      setShowCustomService(false);
     } catch (error) {
       toast({
         title: "Error sending message",
@@ -201,7 +214,13 @@ const Contact = () => {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>Service of Interest</FormLabel>
-                          <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <Select 
+                            onValueChange={(value) => {
+                              field.onChange(value);
+                              setShowCustomService(value === "custom");
+                            }} 
+                            defaultValue={field.value}
+                          >
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select a service" />
@@ -214,12 +233,29 @@ const Contact = () => {
                               <SelectItem value="website-development">Website Development</SelectItem>
                               <SelectItem value="data-analytics">Data Analytics</SelectItem>
                               <SelectItem value="digital-strategy">Digital Strategy Consulting</SelectItem>
+                              <SelectItem value="custom">What else would you love to have?</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
+                    
+                    {showCustomService && (
+                      <FormField
+                        control={form.control}
+                        name="customService"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Tell us what you're looking for</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Describe your custom needs..." {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                    )}
                     
                     <FormField
                       control={form.control}
