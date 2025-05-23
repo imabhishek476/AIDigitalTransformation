@@ -72,7 +72,7 @@ const Hero = () => {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
-              Your Trusted Partner in Navigating the <span className="text-primary">New Era</span> of Digital Transformation
+              Your <span className="text-primary">Trusted Partner</span> in Navigating the <span className="text-primary">New Era</span> of <span className="text-primary">Digital Transformation</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
