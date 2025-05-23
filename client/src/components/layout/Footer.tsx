@@ -37,7 +37,7 @@ const Footer = () => {
           {/* About section */}
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <span className="text-white text-2xl font-bold">Nexus<span className="text-secondary">Digital</span></span>
+              <span className="text-white text-2xl font-bold">Nexi<span className="text-secondary">Front</span></span>
             </Link>
             <p className="text-gray-400 mb-6">
               Your partner in digital transformation, helping businesses embrace AI technology and modern marketing solutions.
@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mt-1 mr-3 text-secondary" />
-                <span className="text-gray-400">contact@nexusdigital.com</span>
+                <span className="text-gray-400">contact@nexifront.com</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 mt-1 mr-3 text-secondary" />
@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              &copy; {currentYear} Nexus Digital. All rights reserved.
+              &copy; {currentYear} NexiFront. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
