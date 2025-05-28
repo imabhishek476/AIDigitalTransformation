@@ -9,7 +9,7 @@ export default function Invoice() {
   return (
     <div className="min-h-screen bg-white">
       {/* Print-specific styles */}
-      <style jsx>{`
+      <style>{`
         @media print {
           .no-print { display: none !important; }
           .print-page { 
