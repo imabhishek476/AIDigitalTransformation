@@ -50,12 +50,12 @@ const Team = () => {
         >
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-2/3 mb-6 md:mb-0 md:pr-10">
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-bold mb-4">Our Philosophy: Human-Guided AI</h3>
               <p className="text-gray-600 mb-4">
-                At Nexus Digital, we're committed to democratizing digital transformation, making cutting-edge AI and marketing solutions accessible to businesses of all sizes. We believe that technology should enhance human experiences, not replace them.
+                While many rush to deploy AI tools without understanding their industry context, we take a different approach. At NexiFront, we combine deep industry expertise with AI technology, providing the ongoing human support and collaboration that complex solutions require.
               </p>
               <p className="text-gray-600">
-                Our approach combines technical expertise with strategic thinking to create digital solutions that drive measurable business outcomes while keeping the human element at the center of everything we do.
+                Our dedicated support staff ensures long-term success, understanding that true digital transformation isn't just about implementing tools—it's about creating sustainable solutions that evolve with your business needs.
               </p>
             </div>
             <div className="md:w-1/3">

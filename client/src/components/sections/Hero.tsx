@@ -75,7 +75,7 @@ const Hero = () => {
               <span className="text-primary">Trusted</span> <span className="text-secondary">Guidance</span> for the <span className="text-primary">Digital</span> <span className="text-accent">Future</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
-              We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
+              We combine cutting-edge AI technology with deep industry expertise and ongoing human support to deliver digital transformation that actually works for your business.
             </p>
             <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 mb-8">
               <Button

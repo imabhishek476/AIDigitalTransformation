@@ -1,5 +1,6 @@
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
+import Philosophy from '@/components/sections/Philosophy';
 import Process from '@/components/sections/Process';
 import CaseStudies from '@/components/sections/CaseStudies';
 import Testimonials from '@/components/sections/Testimonials';
@@ -18,6 +19,7 @@ const Home = () => {
     <>
       <Hero />
       <Services />
+      <Philosophy />
       <Process />
       <CaseStudies />
       <Testimonials />

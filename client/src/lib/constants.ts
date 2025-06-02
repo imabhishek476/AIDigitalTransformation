@@ -51,12 +51,12 @@ export const SERVICES = [
   {
     icon: Bot,
     iconColor: 'text-primary',
-    title: 'AI Integration',
-    description: 'We implement intelligent AI solutions tailored to your business needs, from chatbots to predictive analytics and automated workflows.',
+    title: 'Human-Guided AI Integration',
+    description: 'Unlike generic AI tools, we provide industry-specific AI solutions with dedicated human experts who understand your business context and provide ongoing support.',
     features: [
-      'Custom AI strategy development',
-      'Smart automation implementation',
-      'AI-powered customer insights'
+      'Industry-expert AI strategy development',
+      'Human-supervised automation implementation',
+      'Continuous optimization with expert support'
     ],
     learnMoreColor: 'text-primary'
   },

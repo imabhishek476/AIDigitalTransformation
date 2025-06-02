@@ -41,7 +41,7 @@ const Footer = () => {
               <NexiFrontLogo width={130} height={40} />
             </Link>
             <p className="text-gray-400 mb-6">
-              Your partner in digital transformation, helping businesses embrace AI technology and modern marketing solutions.
+              Combining AI innovation with human expertise and ongoing support to deliver digital transformation solutions that truly understand your industry and evolve with your business.
             </p>
             <div className="flex space-x-4">
               <SocialIcon>
