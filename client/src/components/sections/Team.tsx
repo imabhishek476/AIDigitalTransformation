@@ -50,12 +50,12 @@ const Team = () => {
         >
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-2/3 mb-6 md:mb-0 md:pr-10">
-              <h3 className="text-2xl font-bold mb-4">Our Philosophy: Human-Guided AI</h3>
+              <h3 className="text-2xl font-bold mb-4">Our Philosophy: Solutions That Actually Work</h3>
               <p className="text-gray-600 mb-4">
-                While many rush to deploy AI tools without understanding their industry context, we take a different approach. At NexiFront, we combine deep industry expertise with AI technology, providing the ongoing human support and collaboration that complex solutions require.
+                We don't believe in pre-packaged solutions or generic AI tools that someone created without understanding your business. Instead, we take a consultative approach—diving deep into your specific challenges to create solutions that make sense.
               </p>
               <p className="text-gray-600">
-                Our dedicated support staff ensures long-term success, understanding that true digital transformation isn't just about implementing tools—it's about creating sustainable solutions that evolve with your business needs.
+                Our collaborative process ensures you get long-term solutions that actually work for your unique situation, not cookie-cutter implementations that work poorly because they weren't designed with your needs in mind.
               </p>
             </div>
             <div className="md:w-1/3">

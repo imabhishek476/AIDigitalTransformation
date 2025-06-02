@@ -6,14 +6,14 @@ const Philosophy = () => {
   const differentiators = [
     {
       icon: Users,
-      title: 'Industry Expertise First',
-      description: 'We understand your business context before implementing any AI solution, ensuring tools serve your actual needs.',
+      title: 'Consultative Approach',
+      description: 'We collaborate with you to understand your specific challenges before suggesting any solutions, ensuring tools actually serve your needs.',
       color: 'text-primary'
     },
     {
       icon: Brain,
       title: 'Human-AI Collaboration',
-      description: 'Our experts work alongside AI tools, providing the critical thinking and context that pure automation lacks.',
+      description: 'We work alongside AI tools, providing the critical thinking and business context that generic automation lacks.',
       color: 'text-secondary'
     },
     {
@@ -44,13 +44,13 @@ const Philosophy = () => {
             Why <span className="text-primary">Human Expertise</span> Matters in the <span className="text-secondary">AI Era</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-            While others rush to deploy AI tools without understanding industry context, we recognize that sustainable digital transformation requires the perfect balance of cutting-edge technology and deep human expertise.
+            While others rush to deploy generic AI tools created without understanding your business, we take a consultative approach to understand your unique challenges and create solutions that actually make sense for your situation.
           </p>
           
           <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
             <div className="border-l-4 border-primary pl-6">
               <p className="text-xl text-gray-700 italic mb-4">
-                "AI tools without industry understanding create solutions in search of problems. We create solutions for your specific challenges."
+                "Generic AI tools create solutions in search of problems. We collaborate with you to solve your actual challenges."
               </p>
               <p className="text-sm text-gray-500 font-medium">— The NexiFront Approach</p>
             </div>

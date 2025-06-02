@@ -51,12 +51,12 @@ export const SERVICES = [
   {
     icon: Bot,
     iconColor: 'text-primary',
-    title: 'Human-Guided AI Integration',
-    description: 'Unlike generic AI tools, we provide industry-specific AI solutions with dedicated human experts who understand your business context and provide ongoing support.',
+    title: 'Consultative AI Integration',
+    description: 'We take time to understand your specific challenges before implementing solutions. No generic tools - just thoughtful AI integration that makes sense for your business.',
     features: [
-      'Industry-expert AI strategy development',
-      'Human-supervised automation implementation',
-      'Continuous optimization with expert support'
+      'Deep-dive consultation on your needs',
+      'Custom-tailored AI implementation',
+      'Ongoing optimization and support'
     ],
     learnMoreColor: 'text-primary'
   },
