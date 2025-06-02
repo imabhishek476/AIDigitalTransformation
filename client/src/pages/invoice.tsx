@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { NexiFrontIcon } from '@/components/ui/nexifront-logo';
 
 export default function Invoice() {
   const handlePrint = () => {
@@ -60,8 +61,8 @@ export default function Invoice() {
           
           {/* Logo and Invoice title */}
           <div className="text-right">
-            <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4 ml-auto">
-              <span className="text-white font-bold text-xl">NF</span>
+            <div className="flex justify-end mb-4">
+              <NexiFrontIcon size={80} />
             </div>
             <div className="text-3xl font-bold text-gray-800 mb-2">INVOICE</div>
           </div>

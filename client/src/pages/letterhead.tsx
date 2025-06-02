@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { NexiFrontIcon } from '@/components/ui/nexifront-logo';
 
 export default function Letterhead() {
   const handlePrint = () => {
@@ -59,9 +60,9 @@ export default function Letterhead() {
             </div>
           </div>
           
-          {/* Logo area - you can replace with actual logo */}
-          <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">NF</span>
+          {/* Logo area */}
+          <div className="flex justify-end">
+            <NexiFrontIcon size={80} />
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Mail, Phone, Clock } from 'lucide-react';
 import { SocialIcon } from '@/components/ui/social-icons';
+import { NexiFrontLogo } from '@/components/ui/nexifront-logo';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,7 +38,7 @@ const Footer = () => {
           {/* About section */}
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-6">
-              <span className="text-white text-2xl font-bold">Nexi<span className="text-secondary">Front</span></span>
+              <NexiFrontLogo width={130} height={40} />
             </Link>
             <p className="text-gray-400 mb-6">
               Your partner in digital transformation, helping businesses embrace AI technology and modern marketing solutions.
