@@ -72,7 +72,7 @@ const Hero = () => {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
-              <span className="text-primary">Trusted Guidance</span> for the <span className="text-primary">Digital Future</span>
+              <span className="text-primary">Trusted</span> <span className="text-secondary">Guidance</span> for the <span className="text-primary">Digital</span> <span className="text-accent">Future</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               We help small to medium businesses modernize their digital strategy with cutting-edge AI tools, SEO optimization, and comprehensive marketing solutions.
