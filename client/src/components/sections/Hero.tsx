@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-gradient-warm relative overflow-hidden">
+    <section className="pt-28 pb-20 bg-gradient-hero relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Chat Demo Modal */}
         {showChatDemo && (
