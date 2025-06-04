@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-gradient-to-br from-primary/5 to-secondary/10">
+    <section className="pt-28 pb-20 bg-gradient-warm relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Chat Demo Modal */}
         {showChatDemo && (
@@ -71,8 +71,8 @@ const Hero = () => {
             variants={fadeInUp}
             className="md:w-1/2 mb-10 md:mb-0"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-dark mb-6 leading-tight">
-              <span className="text-primary">Trusted</span> <span className="text-secondary">Guidance</span> for the <span className="text-primary">Digital</span> <span className="text-accent">Future</span>
+            <h1 className="mb-6 leading-tight">
+              <span className="text-gradient-primary">Trusted</span> <span className="text-gradient-secondary">Guidance</span> for the <span className="text-gradient-primary">Digital</span> Future
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-xl">
               We combine cutting-edge AI technology with deep industry expertise and ongoing human support to deliver digital transformation that actually works for your business.
@@ -81,7 +81,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection('#contact')}
-                className="text-center py-6 px-8 text-lg font-medium bg-secondary hover:bg-secondary/90 shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 rounded-lg"
+                className="btn-premium text-center py-6 px-8 text-lg font-medium text-white rounded-xl"
               >
                 Start Your Transformation
               </Button>
@@ -89,7 +89,7 @@ const Hero = () => {
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection('#services')}
-                className="text-center py-6 px-8 text-lg font-medium border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300 shadow-md hover:shadow-lg rounded-lg"
+                className="text-center py-6 px-8 text-lg font-medium border-2 border-primary/30 text-foreground hover:bg-primary/5 transition-all duration-300 shadow-sm hover:shadow-md rounded-xl backdrop-blur-sm"
               >
                 Explore Services
               </Button>

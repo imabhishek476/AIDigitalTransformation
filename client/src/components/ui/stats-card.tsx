@@ -5,9 +5,9 @@ interface StatsCardProps {
 
 export const StatsCard = ({ value, label }: StatsCardProps) => {
   return (
-    <div className="p-4">
-      <p className="text-3xl lg:text-4xl font-bold text-primary mb-2">{value}</p>
-      <p className="text-gray-600">{label}</p>
+    <div className="card-premium p-6 rounded-xl text-center">
+      <p className="text-3xl lg:text-4xl font-bold text-gradient-primary mb-2">{value}</p>
+      <p className="text-muted-foreground font-medium">{label}</p>
     </div>
   );
 };

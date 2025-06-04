@@ -27,42 +27,41 @@ export const ServiceCard = ({
   };
 
   return (
-    <div className="bg-light rounded-xl p-8 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className={cn("mb-4", iconColor)}>
-        <Icon className="h-10 w-10" />
+    <div className="card-premium rounded-xl p-8 group">
+      <div className={cn("mb-6 p-3 rounded-lg w-fit", iconColor)} style={{ background: 'var(--gradient-neutral)' }}>
+        <Icon className="h-8 w-8" />
       </div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4">
+      <h3 className="text-2xl font-bold mb-4 text-foreground">{title}</h3>
+      <p className="text-muted-foreground mb-6 leading-relaxed">
         {description}
       </p>
-      <ul className="space-y-2 mb-6">
+      <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
-            <svg 
-              className="text-success mt-1 mr-2 h-4 w-4" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M5 13l4 4L19 7" 
-              />
-            </svg>
-            <span>{feature}</span>
+            <div className="rounded-full bg-primary/10 p-1 mt-0.5 mr-3 flex-shrink-0">
+              <svg 
+                className="text-primary h-3 w-3" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={3} 
+                  d="M5 13l4 4L19 7" 
+                />
+              </svg>
+            </div>
+            <span className="text-sm text-muted-foreground">{feature}</span>
           </li>
         ))}
       </ul>
       <button 
         onClick={() => scrollToSection('#contact')}
-        className={cn(
-          "font-medium hover:underline inline-flex items-center",
-          learnMoreColor
-        )}
+        className="font-semibold text-primary hover:text-primary/80 inline-flex items-center transition-all duration-300 group-hover:translate-x-1"
       >
-        Learn more <ArrowRight className="ml-2 h-4 w-4" />
+        Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
       </button>
     </div>
   );

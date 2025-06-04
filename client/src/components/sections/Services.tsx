@@ -5,7 +5,7 @@ import { SERVICES } from '@/lib/constants';
 
 const Services = () => {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-gradient-cool">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           variants={fadeInUp}
