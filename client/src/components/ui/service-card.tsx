@@ -28,8 +28,8 @@ export const ServiceCard = ({
 
   return (
     <div className="card-premium rounded-xl p-8 group">
-      <div className={cn("mb-6 p-3 rounded-lg w-fit", iconColor)} style={{ background: 'var(--gradient-neutral)' }}>
-        <Icon className="h-8 w-8" />
+      <div className="mb-6 p-4 rounded-xl w-fit" style={{ background: 'var(--gradient-primary)' }}>
+        <Icon className={cn("h-8 w-8 text-white drop-shadow-sm")} />
       </div>
       <h3 className="text-2xl font-bold mb-4 text-foreground">{title}</h3>
       <p className="text-muted-foreground mb-6 leading-relaxed">
