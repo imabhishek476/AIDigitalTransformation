@@ -190,7 +190,7 @@ export const CASE_STUDIES = [
 
 export const TESTIMONIALS = [
   {
-    quote: '"Nexus Digital completely transformed our online presence. Their AI integration strategies helped us automate customer service and increase satisfaction by 78%. The ROI has been incredible."',
+    quote: '"NexiFront completely transformed our online presence. Their AI integration strategies helped us automate customer service and increase satisfaction by 78%. The ROI has been incredible."',
     authorInitials: 'JM',
     authorName: 'Jennifer Miller',
     authorTitle: 'CEO, RetailPlus',
@@ -204,7 +204,7 @@ export const TESTIMONIALS = [
     authorColor: 'text-secondary'
   },
   {
-    quote: '"Working with Nexus Digital has been a game-changer for our patient engagement. Their comprehensive digital strategy helped us modernize our approach and connect with patients in meaningful ways."',
+    quote: '"Working with NexiFront has been a game-changer for our patient engagement. Their comprehensive digital strategy helped us modernize our approach and connect with patients in meaningful ways."',
     authorInitials: 'SJ',
     authorName: 'Dr. Sarah Johnson',
     authorTitle: 'COO, MedCore Healthcare',
