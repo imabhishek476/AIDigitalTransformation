@@ -159,8 +159,8 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <div className="bg-light p-8 rounded-xl shadow-md">
-                <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
+              <div className="card-premium p-8 rounded-xl">
+                <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Us</h3>
                 
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -277,7 +277,7 @@ const Contact = () => {
                     
                     <Button 
                       type="submit" 
-                      className="w-full" 
+                      className="btn-premium w-full py-3 text-white font-semibold rounded-xl" 
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}

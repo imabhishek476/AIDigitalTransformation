@@ -37,25 +37,25 @@ export const TeamMember = ({
   };
 
   return (
-    <div className="text-center">
-      <div className="relative mb-4 mx-auto w-48 h-48 rounded-full overflow-hidden">
+    <div className="card-premium p-8 rounded-xl text-center group">
+      <div className="relative mb-6 mx-auto w-32 h-32 rounded-full overflow-hidden ring-4 ring-white/50 shadow-lg">
         <img 
           src={image} 
           alt={`${name} - ${title}`} 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
         />
       </div>
-      <h3 className="text-xl font-bold mb-1">{name}</h3>
-      <p className={cn("font-medium mb-2", titleColor)}>{title}</p>
-      <p className="text-gray-600 text-sm mb-3">
+      <h3 className="text-xl font-bold mb-2 text-foreground">{name}</h3>
+      <p className={cn("font-semibold mb-4 text-gradient-primary", titleColor)}>{title}</p>
+      <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
         {description}
       </p>
-      <div className="flex justify-center space-x-3">
+      <div className="flex justify-center space-x-4">
         {socials.map((social, index) => (
           <a 
             key={index}
             href={social.url}
-            className={`text-gray-400 hover:${titleColor} transition-colors`}
+            className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
