@@ -88,7 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-warm">
+    <section id="contact" className="py-20 bg-gradient-warm" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row">
@@ -99,55 +99,63 @@ const Contact = () => {
               viewport={{ once: true }}
               className="lg:w-1/2 lg:pr-16 mb-10 lg:mb-0"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+              <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-6">
                 Ready to start your digital transformation journey? Contact us today to schedule a free consultation with our expert team.
               </p>
               
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start">
-                  <div className="text-primary mr-4 mt-1">
+              <div className="space-y-6 mb-8" role="list" aria-label="Contact information">
+                <div className="flex items-start" role="listitem">
+                  <div className="text-primary mr-4 mt-1" aria-hidden="true">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Innovation Drive, Tech Hub, San Francisco, CA 94103</p>
+                    <address className="text-gray-600 not-italic">123 Innovation Drive, Tech Hub, San Francisco, CA 94103</address>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="text-primary mr-4 mt-1">
+                <div className="flex items-start" role="listitem">
+                  <div className="text-primary mr-4 mt-1" aria-hidden="true">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Email Us</h3>
-                    <p className="text-gray-600">contact@nexifront.com</p>
+                    <a href="mailto:contact@nexifront.com" className="text-gray-600 hover:text-primary transition-colors">contact@nexifront.com</a>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <div className="text-primary mr-4 mt-1">
+                <div className="flex items-start" role="listitem">
+                  <div className="text-primary mr-4 mt-1" aria-hidden="true">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <h3 className="font-bold mb-1">Call Us</h3>
-                    <p className="text-gray-600">(415) 555-1234</p>
+                    <a href="tel:+14155551234" className="text-gray-600 hover:text-primary transition-colors">(415) 555-1234</a>
                   </div>
                 </div>
               </div>
               
-              <div className="flex space-x-4">
+              <div className="flex space-x-4" role="list" aria-label="Social media links">
                 <SocialIcon>
-                  <Linkedin className="h-5 w-5" />
+                  <a href="https://linkedin.com/company/nexifront" aria-label="Follow NexiFront on LinkedIn" className="block">
+                    <Linkedin className="h-5 w-5" />
+                  </a>
                 </SocialIcon>
                 <SocialIcon>
-                  <Twitter className="h-5 w-5" />
+                  <a href="https://twitter.com/nexifront" aria-label="Follow NexiFront on Twitter" className="block">
+                    <Twitter className="h-5 w-5" />
+                  </a>
                 </SocialIcon>
                 <SocialIcon>
-                  <Facebook className="h-5 w-5" />
+                  <a href="https://facebook.com/nexifront" aria-label="Follow NexiFront on Facebook" className="block">
+                    <Facebook className="h-5 w-5" />
+                  </a>
                 </SocialIcon>
                 <SocialIcon>
-                  <Instagram className="h-5 w-5" />
+                  <a href="https://instagram.com/nexifront" aria-label="Follow NexiFront on Instagram" className="block">
+                    <Instagram className="h-5 w-5" />
+                  </a>
                 </SocialIcon>
               </div>
             </motion.div>

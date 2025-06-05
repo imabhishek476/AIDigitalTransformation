@@ -32,7 +32,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Chat Demo Modal */}
         {showChatDemo && (
-          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={toggleChatDemo}>
+          <div 
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
+            onClick={toggleChatDemo}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="demo-title"
+            aria-describedby="demo-description"
+          >
             <div 
               ref={demoRef}
               onClick={(e) => e.stopPropagation()} 
@@ -40,8 +47,8 @@ const Hero = () => {
             >
               <div className="bg-primary p-3 text-white flex justify-between items-center">
                 <div>
-                  <span className="font-semibold">NexiFront AI Assistant</span>
-                  <p className="text-xs opacity-80">See how AI can transform patient scheduling</p>
+                  <span id="demo-title" className="font-semibold">NexiFront AI Assistant</span>
+                  <p id="demo-description" className="text-xs opacity-80">See how AI can transform patient scheduling</p>
                 </div>
                 <button 
                   onClick={toggleChatDemo}
