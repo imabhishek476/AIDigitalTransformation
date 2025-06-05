@@ -29,14 +29,14 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
         />
       </g>
       
-      {/* NEXIFRONT text with clean modern typography */}
+      {/* NEXIFRONT text with stronger typography */}
       <text 
         x="42" 
         y="28" 
         fontFamily="system-ui, -apple-system, 'Segoe UI', sans-serif" 
-        fontSize="20" 
-        fontWeight="300" 
-        letterSpacing="1.2px" 
+        fontSize="21" 
+        fontWeight="500" 
+        letterSpacing="1.1px" 
         fill="#2D3748"
       >
         NEXIFRONT

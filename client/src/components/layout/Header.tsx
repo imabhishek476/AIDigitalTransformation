@@ -38,22 +38,36 @@ const Header = () => {
   };
 
   return (
-    <header className={cn(
-      "fixed w-full z-50 transition-all duration-300",
-      isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
-    )}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-2">
-            <NexiFrontLogo width={150} height={45} />
-          </Link>
+    <>
+      {/* Skip to main content link for accessibility */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      
+      <header 
+        className={cn(
+          "fixed w-full z-50 transition-all duration-300",
+          isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        )}
+        role="banner"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link 
+              href="/" 
+              className="flex items-center space-x-2"
+              aria-label="NexiFront - Home"
+            >
+              <NexiFrontLogo width={150} height={45} />
+            </Link>
           
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden md:flex space-x-10" role="navigation" aria-label="Main navigation">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
                 className="text-gray-600 hover:text-primary font-medium transition-colors"
+                aria-label={`Navigate to ${link.label} section`}
               >
                 {link.label}
               </button>
@@ -63,6 +77,7 @@ const Header = () => {
           <Button
             onClick={() => scrollToSection('#contact')}
             className="hidden md:block"
+            aria-label="Get started with NexiFront services"
           >
             Get Started
           </Button>
@@ -72,6 +87,8 @@ const Header = () => {
             size="icon"
             onClick={toggleMenu}
             className="md:hidden text-gray-500 hover:text-primary hover:bg-transparent"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
@@ -108,6 +125,7 @@ const Header = () => {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 };
 
