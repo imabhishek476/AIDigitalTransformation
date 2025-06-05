@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-28 pb-20 bg-gradient-hero relative overflow-hidden">
+    <section id="hero" className="pt-28 pb-20 bg-gradient-hero relative overflow-hidden" aria-labelledby="hero-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Chat Demo Modal */}
         {showChatDemo && (
@@ -71,7 +71,7 @@ const Hero = () => {
             variants={fadeInUp}
             className="md:w-1/2 mb-10 md:mb-0"
           >
-            <h1 className="mb-8 leading-tight text-foreground">
+            <h1 id="hero-heading" className="mb-8 leading-tight text-foreground">
               Trusted Guidance for <span className="text-secondary">Digital Transformation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl font-light">
@@ -82,6 +82,7 @@ const Hero = () => {
                 size="lg"
                 onClick={() => scrollToSection('#contact')}
                 className="bg-secondary hover:bg-secondary/90 text-white py-4 px-8 text-base font-normal rounded-md transition-all duration-300"
+                aria-label="Get started with NexiFront services - navigate to contact form"
               >
                 GET STARTED
               </Button>
@@ -91,6 +92,7 @@ const Hero = () => {
                 variant="link"
                 onClick={toggleChatDemo}
                 className="flex items-center text-secondary hover:text-secondary/80 transition-colors group"
+                aria-label="Open AI chatbot demonstration"
               >
                 <span className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
@@ -117,6 +119,7 @@ const Hero = () => {
               <button
                 onClick={toggleChatDemo}
                 className="absolute inset-0 bg-black/30 flex items-center justify-center group hover:bg-black/40 transition-colors"
+                aria-label="Play AI chatbot demonstration video"
               >
                 <div className="bg-white/90 p-3 rounded-full group-hover:scale-110 transition-transform">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
@@ -135,6 +138,8 @@ const Hero = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+          role="region"
+          aria-label="Company statistics"
         >
           {stats.map((stat, index) => (
             <StatsCard key={index} value={stat.value} label={stat.label} />
