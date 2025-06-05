@@ -13,32 +13,28 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Modern geometric N symbols inspired by the reference */}
-      <g transform="translate(8, 15)">
-        {/* First N - bolder design */}
+      {/* Clean geometric N symbols */}
+      <g transform="translate(10, 18)">
+        {/* First N - clean design */}
         <path
-          d="M0 6 L0 24 L3.5 24 L3.5 12 L8 20 L11.5 20 L11.5 6 L8 6 L8 18 L3.5 10 L0 10 Z"
+          d="M0 4 L0 20 L3 20 L3 10 L7 18 L10 18 L10 4 L7 4 L7 14 L3 6 L0 6 Z"
           fill="#2D3748"
-          stroke="#2D3748"
-          strokeWidth="1"
         />
-        {/* Second N overlapping - bolder design */}
+        {/* Second N overlapping - clean design */}
         <path
-          d="M12 6 L12 24 L15.5 24 L15.5 12 L20 20 L23.5 20 L23.5 6 L20 6 L20 18 L15.5 10 L12 10 Z"
+          d="M12 4 L12 20 L15 20 L15 10 L19 18 L22 18 L22 4 L19 4 L19 14 L15 6 L12 6 Z"
           fill="#2D3748"
-          stroke="#2D3748"
-          strokeWidth="1"
         />
       </g>
       
-      {/* NEXIFRONT text with lighter typography */}
+      {/* NEXIFRONT text with smaller, balanced typography */}
       <text 
-        x="42" 
-        y="28" 
+        x="45" 
+        y="32" 
         fontFamily="system-ui, -apple-system, 'Segoe UI', sans-serif" 
-        fontSize="21" 
+        fontSize="16" 
         fontWeight="400" 
-        letterSpacing="1.1px" 
+        letterSpacing="0.8px" 
         fill="#2D3748"
       >
         NEXIFRONT
@@ -46,12 +42,12 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
       
       {/* Simple underline accent */}
       <line
-        x1="42"
-        y1="35"
-        x2="170"
-        y2="35"
+        x1="45"
+        y1="38"
+        x2="140"
+        y2="38"
         stroke="#E2725B"
-        strokeWidth="1.5"
+        strokeWidth="1"
       />
     </svg>
   );
