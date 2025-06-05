@@ -13,35 +13,26 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Option 1: Interlocked N symbols with modern twist */}
+      {/* Option E: Bold Interlocked N's */}
       <g transform="translate(8, 16)">
-        {/* Background circle for contrast */}
-        <circle cx="13" cy="14" r="16" fill="#2D3748" opacity="0.05" />
-        
-        {/* First N with angled cuts */}
         <path
-          d="M2 6 L2 22 L5 22 L5 12 L9 20 L12 20 L12 6 L9 6 L9 16 L5 8 L2 8 Z"
+          d="M2 4 L6 4 L6 14 L14 4 L18 4 L18 24 L14 24 L14 14 L6 24 L2 24 Z"
           fill="#2D3748"
         />
-        
-        {/* Second N with slight offset and gradient effect */}
         <path
-          d="M14 6 L14 22 L17 22 L17 12 L21 20 L24 20 L24 6 L21 6 L21 16 L17 8 L14 8 Z"
+          d="M10 4 L14 4 L14 14 L22 4 L26 4 L26 24 L22 24 L22 14 L14 24 L10 24 Z"
           fill="#E2725B"
-          opacity="0.9"
+          opacity="0.8"
         />
-        
-        {/* Connecting element between N's */}
-        <rect x="11" y="13" width="4" height="2" fill="#2D3748" opacity="0.3" />
       </g>
       
-      {/* NEXIFRONT text with smaller, balanced typography */}
+      {/* NEXIFRONT text with lighter weight */}
       <text 
         x="45" 
         y="32" 
         fontFamily="system-ui, -apple-system, 'Segoe UI', sans-serif" 
         fontSize="16" 
-        fontWeight="400" 
+        fontWeight="300" 
         letterSpacing="0.8px" 
         fill="#2D3748"
       >
@@ -52,7 +43,7 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
       <line
         x1="45"
         y1="38"
-        x2="140"
+        x2="130"
         y2="38"
         stroke="#E2725B"
         strokeWidth="1"
