@@ -32,7 +32,7 @@ const Footer = () => {
   };
   
   return (
-    <footer className="bg-dark text-white pt-16 pb-8">
+    <footer className="bg-dark text-white pt-16 pb-8" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* About section */}
@@ -43,25 +43,37 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Combining AI innovation with human expertise and ongoing support to deliver digital transformation solutions that truly understand your industry and evolve with your business.
             </p>
-            <div className="flex space-x-4">
-              <SocialIcon>
+            <div className="flex space-x-4" role="list" aria-label="Social media links">
+              <SocialIcon 
+                href="https://linkedin.com/company/nexifront" 
+                ariaLabel="Follow NexiFront on LinkedIn"
+              >
                 <Linkedin className="h-5 w-5" />
               </SocialIcon>
-              <SocialIcon>
+              <SocialIcon 
+                href="https://twitter.com/nexifront" 
+                ariaLabel="Follow NexiFront on Twitter"
+              >
                 <Twitter className="h-5 w-5" />
               </SocialIcon>
-              <SocialIcon>
+              <SocialIcon 
+                href="https://facebook.com/nexifront" 
+                ariaLabel="Follow NexiFront on Facebook"
+              >
                 <Facebook className="h-5 w-5" />
               </SocialIcon>
-              <SocialIcon>
+              <SocialIcon 
+                href="https://instagram.com/nexifront" 
+                ariaLabel="Follow NexiFront on Instagram"
+              >
                 <Instagram className="h-5 w-5" />
               </SocialIcon>
             </div>
           </div>
           
           {/* Services section */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Our Services</h3>
+          <nav aria-labelledby="footer-services">
+            <h3 id="footer-services" className="text-lg font-bold mb-6">Our Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -74,11 +86,11 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
           
           {/* Quick Links section */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+          <nav aria-labelledby="footer-links">
+            <h3 id="footer-links" className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>

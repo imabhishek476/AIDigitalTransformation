@@ -137,25 +137,29 @@ const Contact = () => {
               </div>
               
               <div className="flex space-x-4" role="list" aria-label="Social media links">
-                <SocialIcon>
-                  <a href="https://linkedin.com/company/nexifront" aria-label="Follow NexiFront on LinkedIn" className="block">
-                    <Linkedin className="h-5 w-5" />
-                  </a>
+                <SocialIcon 
+                  href="https://linkedin.com/company/nexifront" 
+                  ariaLabel="Follow NexiFront on LinkedIn"
+                >
+                  <Linkedin className="h-5 w-5" />
                 </SocialIcon>
-                <SocialIcon>
-                  <a href="https://twitter.com/nexifront" aria-label="Follow NexiFront on Twitter" className="block">
-                    <Twitter className="h-5 w-5" />
-                  </a>
+                <SocialIcon 
+                  href="https://twitter.com/nexifront" 
+                  ariaLabel="Follow NexiFront on Twitter"
+                >
+                  <Twitter className="h-5 w-5" />
                 </SocialIcon>
-                <SocialIcon>
-                  <a href="https://facebook.com/nexifront" aria-label="Follow NexiFront on Facebook" className="block">
-                    <Facebook className="h-5 w-5" />
-                  </a>
+                <SocialIcon 
+                  href="https://facebook.com/nexifront" 
+                  ariaLabel="Follow NexiFront on Facebook"
+                >
+                  <Facebook className="h-5 w-5" />
                 </SocialIcon>
-                <SocialIcon>
-                  <a href="https://instagram.com/nexifront" aria-label="Follow NexiFront on Instagram" className="block">
-                    <Instagram className="h-5 w-5" />
-                  </a>
+                <SocialIcon 
+                  href="https://instagram.com/nexifront" 
+                  ariaLabel="Follow NexiFront on Instagram"
+                >
+                  <Instagram className="h-5 w-5" />
                 </SocialIcon>
               </div>
             </motion.div>
