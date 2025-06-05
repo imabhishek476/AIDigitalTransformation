@@ -197,7 +197,7 @@ export default function LogoDemo() {
               </div>
 
               <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option G: Mirrored N Frame</h3>
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option G: Triple Layer N Frame</h3>
                 <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
                   <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
                     <g transform="translate(8, 16)">
@@ -210,7 +210,10 @@ export default function LogoDemo() {
                         fill="#E2725B"
                         transform="scale(-1,1) translate(-28,0)"
                       />
-                      <rect x="13" y="13" width="2" height="2" fill="#2D3748" />
+                      <path
+                        d="M8 6 L10 6 L10 12 L14 6 L16 6 L16 22 L14 22 L14 16 L10 22 L8 22 Z"
+                        fill="#2D3748"
+                      />
                     </g>
                     <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="300" letterSpacing="0.8px" fill="#2D3748">
                       NEXIFRONT
@@ -218,7 +221,7 @@ export default function LogoDemo() {
                     <line x1="45" y1="38" x2="130" y2="38" stroke="#E2725B" strokeWidth="1" />
                   </svg>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">Mirrored N letters creating balanced symmetrical frame design</p>
+                <p className="text-sm text-gray-600 mt-4">Triple layered N design with mirrored frame and central dark N overlay</p>
               </div>
 
               <div className="bg-white rounded-xl shadow-lg p-8">
