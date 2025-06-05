@@ -72,10 +72,10 @@ const Hero = () => {
             className="md:w-1/2 mb-10 md:mb-0"
           >
             <h1 className="mb-8 leading-tight text-foreground">
-              Driving Digital <span className="text-secondary">Transformation</span>
+              Trusted Guidance for <span className="text-secondary">Digital Transformation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl font-light">
-              We help businesses navigate change and implement innovative digital solutions.
+              We combine cutting-edge technology with human expertise to deliver digital solutions that actually work for your business.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <Button
