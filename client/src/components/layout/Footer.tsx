@@ -112,7 +112,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
           
           {/* Contact Info section */}
           <div>
