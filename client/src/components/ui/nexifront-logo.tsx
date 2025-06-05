@@ -13,61 +13,44 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
       className={className}
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Background gradient circle */}
-      <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#3A9AD9" />
-          <stop offset="50%" stopColor="#FF6B35" />
-          <stop offset="100%" stopColor="#1B365D" />
-        </linearGradient>
-        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#3A9AD9" />
-          <stop offset="100%" stopColor="#1B365D" />
-        </linearGradient>
-      </defs>
-      
-      {/* Logo mark - geometric design */}
-      <g transform="translate(10, 10)">
-        {/* Main circle */}
-        <circle cx="20" cy="20" r="18" fill="url(#logoGradient)" />
-        
-        {/* Inner geometric design - representing digital transformation */}
-        <g fill="white">
-          {/* Forward arrow/chevron pattern */}
-          <path d="M12 12 L20 20 L12 28 L16 28 L24 20 L16 12 Z" opacity="0.9" />
-          {/* Tech dots pattern */}
-          <circle cx="8" cy="15" r="1.5" />
-          <circle cx="8" cy="20" r="1.5" />
-          <circle cx="8" cy="25" r="1.5" />
-          <circle cx="32" cy="15" r="1.5" />
-          <circle cx="32" cy="20" r="1.5" />
-          <circle cx="32" cy="25" r="1.5" />
-        </g>
+      {/* Modern geometric N symbols inspired by the reference */}
+      <g transform="translate(8, 15)">
+        {/* First N */}
+        <path
+          d="M0 6 L0 24 L2.5 24 L2.5 12 L8 20 L10.5 20 L10.5 6 L8 6 L8 18 L2.5 10 L0 10 Z"
+          fill="#2D3748"
+          strokeWidth="0.5"
+        />
+        {/* Second N overlapping */}
+        <path
+          d="M12 6 L12 24 L14.5 24 L14.5 12 L20 20 L22.5 20 L22.5 6 L20 6 L20 18 L14.5 10 L12 10 Z"
+          fill="#2D3748"
+          strokeWidth="0.5"
+        />
       </g>
       
-      {/* Company name */}
-      <g transform="translate(55, 15)">
-        <text 
-          x="0" 
-          y="20" 
-          fontFamily="Arial, sans-serif" 
-          fontSize="24" 
-          fontWeight="bold" 
-          fill="url(#textGradient)"
-        >
-          NexiFront
-        </text>
-        <text 
-          x="0" 
-          y="38" 
-          fontFamily="Arial, sans-serif" 
-          fontSize="9" 
-          fill="#6B7280"
-          letterSpacing="1px"
-        >
-          DIGITAL TRANSFORMATION
-        </text>
-      </g>
+      {/* NEXIFRONT text with clean modern typography */}
+      <text 
+        x="42" 
+        y="28" 
+        fontFamily="system-ui, -apple-system, 'Segoe UI', sans-serif" 
+        fontSize="20" 
+        fontWeight="300" 
+        letterSpacing="1.2px" 
+        fill="#2D3748"
+      >
+        NEXIFRONT
+      </text>
+      
+      {/* Simple underline accent */}
+      <line
+        x1="42"
+        y1="35"
+        x2="170"
+        y2="35"
+        stroke="#E2725B"
+        strokeWidth="1.5"
+      />
     </svg>
   );
 }

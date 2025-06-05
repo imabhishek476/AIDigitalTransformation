@@ -71,27 +71,19 @@ const Hero = () => {
             variants={fadeInUp}
             className="md:w-1/2 mb-10 md:mb-0"
           >
-            <h1 className="mb-6 leading-tight">
-              <span className="text-gradient-primary">Trusted</span> <span className="text-gradient-secondary">Guidance</span> for the <span className="text-gradient-primary">Digital</span> Future
+            <h1 className="mb-8 leading-tight text-foreground">
+              Driving Digital <span className="text-secondary">Transformation</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-xl">
-              We combine cutting-edge AI technology with deep industry expertise and ongoing human support to deliver digital transformation that actually works for your business.
+            <p className="text-lg text-muted-foreground mb-8 max-w-xl font-light">
+              We help businesses navigate change and implement innovative digital solutions.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-5 mb-8">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <Button
                 size="lg"
                 onClick={() => scrollToSection('#contact')}
-                className="btn-premium text-center py-6 px-8 text-lg font-medium text-white rounded-xl"
+                className="bg-secondary hover:bg-secondary/90 text-white py-4 px-8 text-base font-normal rounded-md transition-all duration-300"
               >
-                Start Your Transformation
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => scrollToSection('#services')}
-                className="text-center py-6 px-8 text-lg font-medium border-2 border-primary/30 text-foreground hover:bg-primary/5 transition-all duration-300 shadow-sm hover:shadow-md rounded-xl backdrop-blur-sm"
-              >
-                Explore Services
+                GET STARTED
               </Button>
             </div>
             <div>

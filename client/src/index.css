@@ -4,41 +4,41 @@
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 220 25% 15%; /* Rich charcoal */
-  --muted: 210 20% 97%;  /* Softer, more premium background */
-  --muted-foreground: 220 15% 45%;
+  --foreground: 215 25% 20%; /* Deep charcoal inspired by reference */
+  --muted: 40 20% 97%;  /* Warm light background */
+  --muted-foreground: 215 15% 50%;
   --popover: 0 0% 100%;
-  --popover-foreground: 220 25% 15%;
+  --popover-foreground: 215 25% 20%;
   --card: 0 0% 100%;
-  --card-foreground: 220 25% 15%;
-  --border: 210 15% 90%; /* Very soft borders */
-  --input: 210 20% 95%;
-  --primary: 211 85% 60%; /* Premium blue - sophisticated */
+  --card-foreground: 215 25% 20%;
+  --border: 40 15% 92%; /* Warm soft borders */
+  --input: 40 20% 96%;
+  --primary: 215 25% 20%; /* Deep charcoal primary */
   --primary-foreground: 0 0% 100%;
-  --secondary: 34 85% 65%; /* Warm gold/amber - premium accent */
+  --secondary: 14 85% 60%; /* Orange accent from reference */
   --secondary-foreground: 0 0% 100%;
-  --accent: 150 40% 85%; /* Soft sage green for accents */
-  --accent-foreground: 220 25% 15%;
+  --accent: 40 30% 94%; /* Light warm accent */
+  --accent-foreground: 215 25% 20%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 211 85% 60%;
-  --radius: 0.875rem; /* More refined radius */
+  --ring: 14 85% 60%;
+  --radius: 0.5rem;
   
-  /* Premium gradient system */
-  --gradient-primary: linear-gradient(135deg, hsl(211 85% 60%) 0%, hsl(211 75% 50%) 50%, hsl(211 65% 40%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(34 85% 65%) 0%, hsl(34 75% 55%) 50%, hsl(34 65% 45%) 100%);
-  --gradient-accent: linear-gradient(135deg, hsl(150 40% 85%) 0%, hsl(150 35% 75%) 100%);
-  --gradient-neutral: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(210 15% 92%) 100%);
-  --gradient-surface: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+  /* Clean gradient system inspired by reference */
+  --gradient-primary: linear-gradient(135deg, hsl(215 25% 20%) 0%, hsl(215 30% 25%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(14 85% 60%) 0%, hsl(14 75% 55%) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(40 25% 94%) 100%);
+  --gradient-neutral: linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(40 15% 95%) 100%);
+  --gradient-surface: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);
   
-  /* Sophisticated shadow system */
-  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px 0 rgb(0 0 0 / 0.04);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.08), 0 2px 4px -1px rgb(0 0 0 / 0.04);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -2px rgb(0 0 0 / 0.03);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 10px 10px -5px rgb(0 0 0 / 0.02);
-  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.15);
-  --shadow-glow: 0 0 0 1px rgba(59, 130, 246, 0.1), 0 4px 16px rgba(59, 130, 246, 0.1);
+  /* Clean shadow system */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.10), 0 2px 4px -1px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.10), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.10), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-glow: 0 0 0 1px rgba(226, 114, 91, 0.1), 0 4px 16px rgba(226, 114, 91, 0.1);
 }
   .dark {
   --background: 214 55% 23%; /* Deep Navy #1B365D */
@@ -70,28 +70,35 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     line-height: 1.6;
   }
 
-  /* Modern typography scale */
+  /* Elegant typography inspired by reference */
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-light tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+    @apply text-2xl md:text-3xl font-normal tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.3;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-semibold tracking-tight;
+    @apply text-xl md:text-2xl font-normal tracking-tight;
+    font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.4;
   }
 
@@ -175,17 +182,21 @@
     border-color: rgba(255, 255, 255, 0.4);
   }
 
-  /* Refined gradient backgrounds */
+  /* Clean backgrounds inspired by reference */
   .bg-gradient-warm {
-    background: linear-gradient(135deg, hsl(210 25% 98%) 0%, hsl(34 20% 96%) 20%, hsl(210 20% 97%) 100%);
+    background: linear-gradient(135deg, hsl(40 25% 98%) 0%, hsl(40 20% 96%) 50%, hsl(40 15% 97%) 100%);
   }
 
   .bg-gradient-cool {
-    background: linear-gradient(135deg, hsl(211 30% 98%) 0%, hsl(150 15% 96%) 20%, hsl(211 25% 97%) 100%);
+    background: linear-gradient(135deg, hsl(40 15% 98%) 0%, hsl(40 20% 97%) 100%);
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(135deg, hsl(211 20% 98%) 0%, hsl(34 15% 96%) 30%, hsl(150 10% 97%) 70%, hsl(211 15% 98%) 100%);
+    background: linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(40 15% 96%) 100%);
+  }
+
+  .bg-warm-cream {
+    background: hsl(40 25% 98%);
   }
 }
 
