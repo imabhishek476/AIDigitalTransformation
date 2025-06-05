@@ -145,10 +145,148 @@ export default function LogoDemo() {
           </div>
 
           <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
-            <p className="text-center text-gray-600">
-              Each option maintains the bold, simple aesthetic while adding visual interest through different geometric approaches.
-              The designs work well at various sizes and maintain brand recognition.
-            </p>
+            <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">
+              Single Character Abstract Designs
+            </h2>
+            
+            <div className="grid gap-8">
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option E: Crystalline Prism</h3>
+                <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
+                  <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 16)">
+                      <path
+                        d="M13 4 L22 10 L22 18 L13 24 L4 18 L4 10 Z"
+                        fill="#2D3748"
+                        stroke="#E2725B"
+                        strokeWidth="1.5"
+                      />
+                      <path
+                        d="M13 4 L13 24 M4 10 L22 18 M22 10 L4 18"
+                        stroke="#E2725B"
+                        strokeWidth="0.5"
+                        opacity="0.6"
+                      />
+                    </g>
+                    <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
+                      NEXIFRONT
+                    </text>
+                    <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">Crystalline hexagonal prism with internal facets for sophistication and depth</p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option F: Infinity Node</h3>
+                <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
+                  <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 16)">
+                      <path
+                        d="M6 14 Q13 8 20 14 Q13 20 6 14 Z"
+                        fill="none"
+                        stroke="#2D3748"
+                        strokeWidth="3"
+                      />
+                      <circle cx="6" cy="14" r="3" fill="#2D3748" />
+                      <circle cx="20" cy="14" r="3" fill="#E2725B" />
+                      <circle cx="13" cy="14" r="1.5" fill="#2D3748" opacity="0.6" />
+                    </g>
+                    <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
+                      NEXIFRONT
+                    </text>
+                    <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">Infinity symbol with nodes representing endless possibilities and connections</p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option G: Spiral Convergence</h3>
+                <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
+                  <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 16)">
+                      <path
+                        d="M13 4 Q20 4 20 11 Q20 18 13 18 Q6 18 6 11 Q6 8 9 8"
+                        fill="none"
+                        stroke="#2D3748"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M13 24 Q6 24 6 17 Q6 10 13 10 Q20 10 20 17 Q20 20 17 20"
+                        fill="none"
+                        stroke="#E2725B"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      <circle cx="13" cy="14" r="2" fill="#2D3748" />
+                    </g>
+                    <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
+                      NEXIFRONT
+                    </text>
+                    <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">Dual spirals converging at center point representing growth and transformation</p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option H: Quantum Gate</h3>
+                <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
+                  <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 16)">
+                      <rect x="4" y="6" width="18" height="16" rx="2" fill="none" stroke="#2D3748" strokeWidth="2" />
+                      <rect x="8" y="10" width="10" height="8" rx="1" fill="#E2725B" opacity="0.3" />
+                      <circle cx="7" cy="14" r="1.5" fill="#2D3748" />
+                      <circle cx="19" cy="14" r="1.5" fill="#2D3748" />
+                      <line x1="9" y1="14" x2="17" y2="14" stroke="#E2725B" strokeWidth="2" strokeDasharray="2,2" />
+                    </g>
+                    <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
+                      NEXIFRONT
+                    </text>
+                    <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">Quantum gate symbol representing digital transformation and advanced technology</p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-8">
+                <h3 className="text-lg font-semibold mb-4 text-gray-700">Option I: Vortex Matrix</h3>
+                <div className="flex items-center justify-center p-6 bg-gray-50 rounded-lg">
+                  <svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(8, 16)">
+                      <defs>
+                        <radialGradient id="vortexGradient" cx="50%" cy="50%" r="50%">
+                          <stop offset="0%" stopColor="#E2725B" stopOpacity="0.8" />
+                          <stop offset="100%" stopColor="#2D3748" stopOpacity="0.2" />
+                        </radialGradient>
+                      </defs>
+                      <circle cx="13" cy="14" r="12" fill="url(#vortexGradient)" />
+                      <path
+                        d="M13 6 L17 10 L13 14 L17 18 L13 22 L9 18 L13 14 L9 10 Z"
+                        fill="#2D3748"
+                        stroke="#E2725B"
+                        strokeWidth="1"
+                      />
+                      <circle cx="13" cy="14" r="3" fill="none" stroke="#E2725B" strokeWidth="1.5" />
+                    </g>
+                    <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
+                      NEXIFRONT
+                    </text>
+                    <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-600 mt-4">Dynamic vortex with geometric star center representing energy and innovation</p>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-8 mt-8">
+              <p className="text-center text-gray-600">
+                Each single character design maintains sophistication while providing unique geometric abstraction.
+                These designs emphasize balance, boldness, and modern aesthetics suitable for digital transformation branding.
+              </p>
+            </div>
           </div>
         </div>
       </div>
