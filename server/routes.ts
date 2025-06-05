@@ -1,7 +1,13 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertContactSchema } from "@shared/schema";
+import { 
+  insertContactSchema, 
+  insertUserProgressSchema, 
+  insertUserActivitySchema,
+  insertAchievementSchema,
+  insertUserAchievementSchema
+} from "@shared/schema";
 import { z } from "zod";
 import { emailService } from "./emailService";
 
@@ -58,6 +64,149 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: false,
         message: 'Failed to retrieve contact submissions'
       });
+    }
+  });
+
+  // Gamification API Routes
+  
+  // Get user progress
+  app.get('/api/gamification/progress/:userId', async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId);
+      if (isNaN(userId)) {
+        return res.status(400).json({ success: false, message: 'Invalid user ID' });
+      }
+
+      let progress = await storage.getUserProgress(userId);
+      
+      // Create initial progress if none exists
+      if (!progress) {
+        progress = await storage.createUserProgress({
+          userId,
+          totalPoints: 0,
+          currentLevel: 1,
+          currentLevelProgress: 0,
+          streak: 0
+        });
+      }
+
+      res.status(200).json(progress);
+    } catch (error) {
+      console.error('Error fetching user progress:', error);
+      res.status(500).json({ success: false, message: 'Failed to retrieve progress' });
+    }
+  });
+
+  // Update user progress
+  app.put('/api/gamification/progress/:userId', async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId);
+      if (isNaN(userId)) {
+        return res.status(400).json({ success: false, message: 'Invalid user ID' });
+      }
+
+      const progressData = insertUserProgressSchema.parse(req.body);
+      const updatedProgress = await storage.updateUserProgress(userId, progressData);
+      
+      res.status(200).json(updatedProgress);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ success: false, message: 'Validation error', errors: error.errors });
+      }
+      console.error('Error updating user progress:', error);
+      res.status(500).json({ success: false, message: 'Failed to update progress' });
+    }
+  });
+
+  // Record user activity
+  app.post('/api/gamification/activity', async (req, res) => {
+    try {
+      const activityData = insertUserActivitySchema.parse(req.body);
+      const activity = await storage.createUserActivity(activityData);
+      
+      // Auto-update user progress based on activity
+      const currentProgress = await storage.getUserProgress(activityData.userId);
+      if (currentProgress && activityData.pointsEarned > 0) {
+        const newTotalPoints = currentProgress.totalPoints + activityData.pointsEarned;
+        const newLevel = Math.floor(newTotalPoints / 100) + 1; // 100 points per level
+        const newLevelProgress = newTotalPoints % 100;
+        
+        await storage.updateUserProgress(activityData.userId, {
+          totalPoints: newTotalPoints,
+          currentLevel: newLevel,
+          currentLevelProgress: newLevelProgress,
+          lastActivityDate: new Date()
+        });
+      }
+      
+      res.status(201).json(activity);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ success: false, message: 'Validation error', errors: error.errors });
+      }
+      console.error('Error recording activity:', error);
+      res.status(500).json({ success: false, message: 'Failed to record activity' });
+    }
+  });
+
+  // Get user activities
+  app.get('/api/gamification/activities/:userId', async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId);
+      const limit = parseInt(req.query.limit as string) || 50;
+      
+      if (isNaN(userId)) {
+        return res.status(400).json({ success: false, message: 'Invalid user ID' });
+      }
+
+      const activities = await storage.getUserActivities(userId, limit);
+      res.status(200).json(activities);
+    } catch (error) {
+      console.error('Error fetching user activities:', error);
+      res.status(500).json({ success: false, message: 'Failed to retrieve activities' });
+    }
+  });
+
+  // Get all achievements
+  app.get('/api/gamification/achievements', async (req, res) => {
+    try {
+      const achievements = await storage.getAchievements();
+      res.status(200).json(achievements);
+    } catch (error) {
+      console.error('Error fetching achievements:', error);
+      res.status(500).json({ success: false, message: 'Failed to retrieve achievements' });
+    }
+  });
+
+  // Get user achievements
+  app.get('/api/gamification/achievements/:userId', async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId);
+      if (isNaN(userId)) {
+        return res.status(400).json({ success: false, message: 'Invalid user ID' });
+      }
+
+      const userAchievements = await storage.getUserAchievements(userId);
+      res.status(200).json(userAchievements);
+    } catch (error) {
+      console.error('Error fetching user achievements:', error);
+      res.status(500).json({ success: false, message: 'Failed to retrieve achievements' });
+    }
+  });
+
+  // Award achievement to user
+  app.post('/api/gamification/achievements/award', async (req, res) => {
+    try {
+      const awardData = insertUserAchievementSchema.parse(req.body);
+      const userAchievement = await storage.createUserAchievement(awardData);
+      
+      res.status(201).json(userAchievement);
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ success: false, message: 'Validation error', errors: error.errors });
+      }
+      console.error('Error awarding achievement:', error);
+      res.status(500).json({ success: false, message: 'Failed to award achievement' });
     }
   });
 
