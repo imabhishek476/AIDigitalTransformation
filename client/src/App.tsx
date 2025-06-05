@@ -19,7 +19,7 @@ function Router() {
   return (
     <div className="flex flex-col min-h-screen">
       {!isAdmin && !isTemplate && <Header />}
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow" role="main">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/admin" component={AdminDashboard} />

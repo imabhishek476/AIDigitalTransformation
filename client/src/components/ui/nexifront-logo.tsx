@@ -15,27 +15,29 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
     >
       {/* Modern geometric N symbols inspired by the reference */}
       <g transform="translate(8, 15)">
-        {/* First N */}
+        {/* First N - bolder design */}
         <path
-          d="M0 6 L0 24 L2.5 24 L2.5 12 L8 20 L10.5 20 L10.5 6 L8 6 L8 18 L2.5 10 L0 10 Z"
+          d="M0 6 L0 24 L3.5 24 L3.5 12 L8 20 L11.5 20 L11.5 6 L8 6 L8 18 L3.5 10 L0 10 Z"
           fill="#2D3748"
-          strokeWidth="0.5"
+          stroke="#2D3748"
+          strokeWidth="1"
         />
-        {/* Second N overlapping */}
+        {/* Second N overlapping - bolder design */}
         <path
-          d="M12 6 L12 24 L14.5 24 L14.5 12 L20 20 L22.5 20 L22.5 6 L20 6 L20 18 L14.5 10 L12 10 Z"
+          d="M12 6 L12 24 L15.5 24 L15.5 12 L20 20 L23.5 20 L23.5 6 L20 6 L20 18 L15.5 10 L12 10 Z"
           fill="#2D3748"
-          strokeWidth="0.5"
+          stroke="#2D3748"
+          strokeWidth="1"
         />
       </g>
       
-      {/* NEXIFRONT text with stronger typography */}
+      {/* NEXIFRONT text with lighter typography */}
       <text 
         x="42" 
         y="28" 
         fontFamily="system-ui, -apple-system, 'Segoe UI', sans-serif" 
         fontSize="21" 
-        fontWeight="500" 
+        fontWeight="400" 
         letterSpacing="1.1px" 
         fill="#2D3748"
       >

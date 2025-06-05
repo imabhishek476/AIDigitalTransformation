@@ -27,8 +27,8 @@ export const ServiceCard = ({
   };
 
   return (
-    <div className="card-premium rounded-xl p-8 group">
-      <div className="mb-6 p-4 rounded-xl w-fit" style={{ background: 'var(--gradient-primary)' }}>
+    <article className="card-premium rounded-xl p-8 group">
+      <div className="mb-6 p-4 rounded-xl w-fit" style={{ background: 'var(--gradient-primary)' }} aria-hidden="true">
         <Icon className={cn("h-8 w-8 text-white drop-shadow-sm")} />
       </div>
       <h3 className="text-2xl font-bold mb-4 text-foreground">{title}</h3>
@@ -60,9 +60,10 @@ export const ServiceCard = ({
       <button 
         onClick={() => scrollToSection('#contact')}
         className="font-semibold text-primary hover:text-primary/80 inline-flex items-center transition-all duration-300 group-hover:translate-x-1"
+        aria-label={`Learn more about ${title}`}
       >
         Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
       </button>
-    </div>
+    </article>
   );
 };
