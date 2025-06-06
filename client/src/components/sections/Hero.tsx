@@ -98,7 +98,7 @@ const Hero = () => {
               <Button
                 variant="link"
                 onClick={toggleChatDemo}
-                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group"
+                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group hover:no-underline"
                 aria-label="Open AI chatbot demonstration"
               >
                 <span className="flex items-center">
@@ -108,7 +108,7 @@ const Hero = () => {
                   </svg>
                   See AI Chatbot Demo
                 </span>
-                <span className="ml-1 inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1 text-xl no-underline">&rarr;</span>
               </Button>
             </div>
           </motion.div>
