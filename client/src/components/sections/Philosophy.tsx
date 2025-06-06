@@ -20,7 +20,7 @@ const Philosophy = () => {
       icon: Shield,
       title: 'Thoughtful Implementation',
       description: 'We avoid the "AI for AI\'s sake" mentality, carefully evaluating when and how AI adds genuine value.',
-      color: 'text-accent'
+      color: 'text-primary'
     },
     {
       icon: Headphones,
