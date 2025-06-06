@@ -11,40 +11,22 @@ const WhyChooseUs = () => {
 
   const advantages = [
     {
-      icon: Users,
-      title: "Human-Guided Approach",
-      description: "Unlike automated solutions, we combine AI technology with expert human oversight to ensure your digital transformation aligns with your business goals.",
-      color: "text-primary"
-    },
-    {
-      icon: Target,
-      title: "Consultative Process",
-      description: "We start by understanding your unique challenges and objectives, then design customized solutions that address your specific business needs.",
-      color: "text-secondary"
-    },
-    {
-      icon: Zap,
-      title: "Proven Methodology",
-      description: "Our systematic approach ensures sustainable results through careful planning, implementation, and ongoing optimization.",
-      color: "text-primary"
-    },
-    {
-      icon: Shield,
-      title: "Ongoing Support",
-      description: "Digital transformation doesn't end at launch. We provide continuous monitoring, updates, and strategic guidance as your business evolves.",
-      color: "text-secondary"
-    },
-    {
       icon: TrendingUp,
-      title: "Measurable Results",
-      description: "Every strategy we implement includes clear metrics and regular reporting so you can see the impact on your business growth.",
+      title: "Measurable ROI",
+      description: "Every strategy includes clear metrics and regular reporting so you can track the impact on your business growth and revenue.",
       color: "text-primary"
     },
     {
       icon: CheckCircle,
-      title: "Scalable Solutions",
-      description: "Our solutions grow with your business, ensuring your digital infrastructure can handle increased demand and complexity.",
+      title: "Scalable Infrastructure",
+      description: "Our solutions grow with your business, ensuring your digital systems can handle increased demand and complexity.",
       color: "text-secondary"
+    },
+    {
+      icon: Shield,
+      title: "Ongoing Partnership",
+      description: "We provide continuous monitoring, updates, and strategic guidance as your business evolves and new opportunities emerge.",
+      color: "text-primary"
     }
   ];
 
@@ -58,9 +40,9 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 id="advantages-heading" className="text-3xl md:text-4xl font-bold mb-4">Why Choose NexiFront</h2>
+          <h2 id="advantages-heading" className="text-3xl md:text-4xl font-bold mb-4">What You Get</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our unique approach to digital transformation combines cutting-edge technology with human expertise to deliver sustainable business growth.
+            Tangible business outcomes from your digital transformation investment.
           </p>
         </motion.div>
         

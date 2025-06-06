@@ -5,28 +5,16 @@ import { Users, Brain, Shield, Headphones } from 'lucide-react';
 const Philosophy = () => {
   const differentiators = [
     {
-      icon: Users,
-      title: 'Consultative Approach',
-      description: 'We collaborate with you to understand your specific challenges before suggesting any solutions, ensuring tools actually serve your needs.',
-      color: 'text-primary'
-    },
-    {
       icon: Brain,
-      title: 'Human-AI Collaboration',
-      description: 'We work alongside AI tools, providing the critical thinking and business context that generic automation lacks.',
+      title: 'Strategic Implementation',
+      description: 'We evaluate when and how technology adds genuine value, avoiding the "AI for AI\'s sake" mentality.',
+      color: 'text-primary'
+    },
+    {
+      icon: Users,
+      title: 'Collaborative Partnership',
+      description: 'Our consultative process ensures solutions align with your specific business challenges and goals.',
       color: 'text-secondary'
-    },
-    {
-      icon: Shield,
-      title: 'Thoughtful Implementation',
-      description: 'We avoid the "AI for AI\'s sake" mentality, carefully evaluating when and how AI adds genuine value.',
-      color: 'text-primary'
-    },
-    {
-      icon: Headphones,
-      title: 'Ongoing Support',
-      description: 'Complex solutions require ongoing human collaboration. Our dedicated team ensures long-term success.',
-      color: 'text-primary'
     }
   ];
 
@@ -41,10 +29,10 @@ const Philosophy = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Why <span className="text-primary">Human Expertise</span> Matters in the <span className="text-secondary">AI Era</span>
+            <span className="text-primary">Human-Guided</span> Digital Transformation
           </h2>
-          <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-            While others rush to deploy generic AI tools created without understanding your business, NexiFront takes a consultative approach to understand your unique challenges and create solutions that actually make sense for your situation.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+            We believe technology should amplify human intelligence, not replace it. Our consultative approach ensures your digital transformation serves your actual business needs.
           </p>
           
           <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">

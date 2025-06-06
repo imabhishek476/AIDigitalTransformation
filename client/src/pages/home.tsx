@@ -1,7 +1,6 @@
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
 import Philosophy from '@/components/sections/Philosophy';
-import Process from '@/components/sections/Process';
 import WhyChooseUs from '@/components/sections/CaseStudies';
 import OurMethodology from '@/components/sections/Testimonials';
 import Team from '@/components/sections/Team';
@@ -20,7 +19,6 @@ const Home = () => {
       <Hero />
       <Services />
       <Philosophy />
-      <Process />
       <WhyChooseUs />
       <OurMethodology />
       <Team />
