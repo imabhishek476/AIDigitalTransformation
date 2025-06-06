@@ -98,17 +98,17 @@ const Hero = () => {
               <Button
                 variant="link"
                 onClick={toggleChatDemo}
-                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group hover:no-underline"
+                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group"
                 aria-label="Open AI chatbot demonstration"
               >
-                <span className="flex items-center">
+                <span className="flex items-center underline-offset-4 hover:underline">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
                     <circle cx="12" cy="12" r="10"></circle>
                     <polygon points="10 8 16 12 10 16 10 8"></polygon>
                   </svg>
                   See AI Chatbot Demo
                 </span>
-                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1 text-xl no-underline">&rarr;</span>
+                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1 text-xl">&rarr;</span>
               </Button>
             </div>
           </motion.div>
