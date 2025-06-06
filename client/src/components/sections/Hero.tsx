@@ -1,6 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { StatsCard } from '@/components/ui/stats-card';
 import { AIChatbotDemo } from '@/components/ui/ai-chatbot-demo';
+import { ContactForm } from '@/components/ui/contact-form';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { useState, useRef } from 'react';
@@ -14,14 +16,8 @@ const stats = [
 
 const Hero = () => {
   const [showChatDemo, setShowChatDemo] = useState(false);
+  const [showContactModal, setShowContactModal] = useState(false);
   const demoRef = useRef<HTMLDivElement>(null);
-  
-  const scrollToSection = (id: string) => {
-    const element = document.querySelector(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const toggleChatDemo = () => {
     setShowChatDemo(!showChatDemo);
@@ -85,14 +81,28 @@ const Hero = () => {
               We combine cutting-edge technology with human expertise to deliver digital solutions that actually work for your business.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
-              <Button
-                size="lg"
-                onClick={() => scrollToSection('#contact')}
-                className="bg-secondary hover:bg-secondary/90 text-white py-4 px-8 text-base font-normal rounded-md transition-all duration-300"
-                aria-label="Get started with NexiFront services - navigate to contact form"
-              >
-                GET STARTED
-              </Button>
+              <Dialog open={showContactModal} onOpenChange={setShowContactModal}>
+                <DialogTrigger asChild>
+                  <Button
+                    size="lg"
+                    className="bg-secondary hover:bg-secondary/90 text-white py-4 px-8 text-base font-normal rounded-md transition-all duration-300"
+                    aria-label="Get started with NexiFront services - open contact form"
+                  >
+                    GET STARTED
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-bold text-center mb-2">
+                      Start Your Digital Transformation
+                    </DialogTitle>
+                    <p className="text-muted-foreground text-center mb-6">
+                      Tell us about your project and we'll get back to you within 24 hours with a personalized proposal.
+                    </p>
+                  </DialogHeader>
+                  <ContactForm onSuccess={() => setShowContactModal(false)} />
+                </DialogContent>
+              </Dialog>
             </div>
             <div>
               <button
