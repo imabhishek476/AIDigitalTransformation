@@ -204,7 +204,7 @@ export function AIChatbotDemo() {
             <div 
               className={`max-w-[80%] p-3 rounded-lg ${
                 message.sender === 'user' 
-                  ? 'bg-primary text-white rounded-tr-none' 
+                  ? 'bg-blue-500 text-white rounded-tr-none shadow-sm' 
                   : 'bg-white text-gray-800 border border-gray-200 rounded-tl-none shadow-sm'
               }`}
             >
