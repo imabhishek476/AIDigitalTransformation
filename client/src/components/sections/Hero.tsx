@@ -68,13 +68,13 @@ const Hero = () => {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="flex flex-col md:flex-row items-center"
+          className="flex flex-col lg:flex-row items-center max-w-7xl mx-auto"
         >
           <motion.div 
             variants={fadeInUp}
-            className="md:w-1/2 mb-10 md:mb-0"
+            className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12"
           >
-            <h1 id="hero-heading" className="mb-8 leading-tight text-foreground">
+            <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl font-bold mb-8 leading-tight text-foreground">
               Trusted Guidance for <span className="text-secondary">Digital Transformation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl font-light">
@@ -124,13 +124,13 @@ const Hero = () => {
           
           <motion.div 
             variants={fadeInUp}
-            className="md:w-1/2"
+            className="lg:w-1/2"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-xl">
+            <div className="relative rounded-xl overflow-hidden shadow-xl max-w-lg mx-auto lg:max-w-none">
               <img 
                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
                 alt="Digital transformation team meeting" 
-                className="w-full h-auto" 
+                className="w-full h-auto aspect-[4/3] object-cover" 
               />
               <button
                 onClick={toggleChatDemo}
