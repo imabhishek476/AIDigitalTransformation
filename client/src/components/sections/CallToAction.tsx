@@ -20,7 +20,7 @@ const CallToAction = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Digital Presence?</h2>
           <p className="text-white/80 text-lg mb-8">
-            Join hundreds of businesses that have successfully navigated their digital transformation journey with our expert guidance.
+            Join hundreds of businesses that have successfully navigated their digital transformation journey with NexiFront's expert guidance.
           </p>
           <Dialog open={showContactModal} onOpenChange={setShowContactModal}>
             <DialogTrigger asChild>

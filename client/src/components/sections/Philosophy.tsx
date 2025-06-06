@@ -44,7 +44,7 @@ const Philosophy = () => {
             Why <span className="text-primary">Human Expertise</span> Matters in the <span className="text-secondary">AI Era</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto mb-8">
-            While others rush to deploy generic AI tools created without understanding your business, we take a consultative approach to understand your unique challenges and create solutions that actually make sense for your situation.
+            While others rush to deploy generic AI tools created without understanding your business, NexiFront takes a consultative approach to understand your unique challenges and create solutions that actually make sense for your situation.
           </p>
           
           <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
@@ -89,7 +89,7 @@ const Philosophy = () => {
           <div className="bg-primary/10 p-8 rounded-xl">
             <h3 className="text-2xl font-bold mb-4 text-primary">The Bottom Line</h3>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Technology should amplify human intelligence, not replace it. Our approach ensures your digital transformation is built on solid foundations with the ongoing support needed for complex, evolving business challenges.
+              Technology should amplify human intelligence, not replace it. NexiFront's approach ensures your digital transformation is built on solid foundations with the ongoing support needed for complex, evolving business challenges.
             </p>
           </div>
         </motion.div>

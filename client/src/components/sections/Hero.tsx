@@ -78,7 +78,7 @@ const Hero = () => {
               Trusted Guidance for <span className="text-secondary">Digital Transformation</span>
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl font-light">
-              We combine cutting-edge technology with human expertise to deliver digital solutions that actually work for your business.
+              At NexiFront, we combine cutting-edge technology with human expertise to deliver digital solutions that actually work for your business.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <Dialog open={showContactModal} onOpenChange={setShowContactModal}>

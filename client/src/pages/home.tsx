@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 const Home = () => {
   useEffect(() => {
     // Set page title
-    document.title = 'Nexus Digital - AI-Powered Digital Transformation Agency';
+    document.title = 'NexiFront - AI-Powered Digital Transformation Agency';
   }, []);
 
   return (
