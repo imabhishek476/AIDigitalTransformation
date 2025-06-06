@@ -11,6 +11,7 @@ import Invoice from "@/pages/invoice";
 import LogoDemo from "@/pages/logo-demo";
 import ResponsiveTest from "@/pages/responsive-test";
 import LayoutGuide from "@/pages/layout-guide";
+import MobileTesting from "@/pages/mobile-testing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -38,6 +39,7 @@ function Router() {
           <Route path="/logo-demo" component={LogoDemo} />
           <Route path="/responsive-test" component={ResponsiveTest} />
           <Route path="/layout-guide" component={LayoutGuide} />
+          <Route path="/mobile-testing" component={MobileTesting} />
           <Route component={NotFound} />
         </Switch>
       </main>
