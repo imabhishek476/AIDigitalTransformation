@@ -86,11 +86,11 @@ const Header = () => {
             variant="ghost"
             size="icon"
             onClick={toggleMenu}
-            className="md:hidden text-gray-500 hover:text-primary hover:bg-transparent"
+            className="md:hidden text-gray-500 hover:text-primary hover:bg-transparent min-h-[48px] min-w-[48px]"
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isOpen}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
           </Button>
         </div>
       </div>
@@ -104,22 +104,25 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white"
           >
-            <div className="container mx-auto px-4 py-3 space-y-3">
+            <div className="container mx-auto px-4 py-4 space-y-1">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollToSection(link.href)}
-                  className="block w-full text-left text-gray-600 hover:text-primary font-medium py-2 transition-colors"
+                  className="block w-full text-left text-gray-600 hover:text-primary font-medium py-4 px-2 transition-colors rounded-md hover:bg-gray-50 min-h-[48px] text-base"
                 >
                   {link.label}
                 </button>
               ))}
-              <Button
-                onClick={() => scrollToSection('#contact')}
-                className="w-full"
-              >
-                Get Started
-              </Button>
+              <div className="pt-2">
+                <Button
+                  onClick={() => scrollToSection('#contact')}
+                  className="w-full"
+                  size="lg"
+                >
+                  Get Started
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}
