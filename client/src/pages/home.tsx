@@ -6,7 +6,6 @@ import CaseStudies from '@/components/sections/CaseStudies';
 import Testimonials from '@/components/sections/Testimonials';
 import Team from '@/components/sections/Team';
 import CallToAction from '@/components/sections/CallToAction';
-import Contact from '@/components/sections/Contact';
 import { useEffect } from 'react';
 
 const Home = () => {
@@ -25,7 +24,6 @@ const Home = () => {
       <Testimonials />
       <Team />
       <CallToAction />
-      <Contact />
     </>
   );
 };
