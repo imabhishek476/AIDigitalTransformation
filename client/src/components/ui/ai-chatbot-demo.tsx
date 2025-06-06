@@ -15,7 +15,7 @@ interface Message {
 const initialMessages: Message[] = [
   {
     id: 1,
-    content: "Hello! Welcome to NexiFront AI Assistant. How can I help you today?",
+    content: "Hello! Welcome to [Medical Practice Name]. How can I assist you today?",
     sender: "bot",
     timestamp: new Date()
   }
@@ -25,15 +25,11 @@ const initialMessages: Message[] = [
 const botResponses = [
   {
     trigger: ["hi,", "hello", "hey", "appointment", "schedule"],
-    response: "Great! I can help with that. What type of appointment are you looking to schedule?"
+    response: "Great! What type of appointment are you looking to schedule?"
   },
   {
     trigger: ["dermatologist", "skin", "derm"],
-    response: "Got it. We have several dermatologists available. Do you have a preferred doctor or should I find the earliest available appointment for you?"
-  },
-  {
-    trigger: ["don't have a preference", "earliest", "available", "works for me"],
-    response: "The earliest available appointment is with Dr. Patel on Tuesday at 10 AM. Does that work for you?"
+    response: "Got it! The earliest available appointment is with Dr. Patel on Tuesday at 10 AM. Does that work for you?"
   },
   {
     trigger: ["meeting", "later", "later in the day", "can we do it later"],
@@ -41,11 +37,7 @@ const botResponses = [
   },
   {
     trigger: ["yes", "perfectly", "works perfectly", "2 pm works"],
-    response: "Great! I've scheduled your appointment with Dr. Patel for Tuesday at 2 PM. Is there anything else I can help you with?"
-  },
-  {
-    trigger: ["no", "that's all", "thank you", "thanks"],
-    response: "You're welcome! Have a great day and we'll see you on Tuesday at 2 PM."
+    response: "Great! Your appointment is confirmed for Tuesday at 2 PM. Anything else I can help with?"
   }
 ];
 
@@ -83,19 +75,11 @@ export function AIChatbotDemo() {
         delay: 5000
       },
       {
-        message: "I don't have a preference. The earliest available appointment works for me.",
+        message: "Actually, I have a meeting then. Can we do it later in the day?",
         delay: 6000
-      },
-      {
-        message: "Actually, I just remembered I have a meeting at that time. Can we do it later in the day?",
-        delay: 7000
       },
       {
         message: "Yes, 2 PM works perfectly.",
-        delay: 6000
-      },
-      {
-        message: "No, that's all. Thank you!",
         delay: 6000
       }
     ];
