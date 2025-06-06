@@ -2,6 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Mobile-first typography and spacing improvements */
+@layer base {
+  html {
+    font-size: 16px; /* Ensure 16px base for mobile readability */
+  }
+  
+  body {
+    line-height: 1.6; /* Improved readability */
+  }
+  
+  /* Ensure minimum touch targets on mobile */
+  button, 
+  a[role="button"], 
+  input[type="button"], 
+  input[type="submit"],
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Improved form element spacing */
+  .form-spacing > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* Professional content spacing */
+  .content-spacing {
+    padding: 1.5rem 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .content-spacing {
+      padding: 2rem 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .content-spacing {
+      padding: 3rem 2rem;
+    }
+  }
+}
+
 :root {
   --background: 0 0% 100%;
   --foreground: 215 25% 20%; /* Deep charcoal inspired by reference */

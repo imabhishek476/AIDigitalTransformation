@@ -88,7 +88,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-warm" aria-labelledby="contact-heading">
+    <section id="contact" className="py-16 md:py-20 lg:py-24 bg-gradient-warm" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row">
@@ -175,7 +175,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Us</h3>
                 
                 <Form {...form}>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="form-spacing">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <FormField
                         control={form.control}
