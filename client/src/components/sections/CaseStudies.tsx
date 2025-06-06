@@ -1,17 +1,55 @@
 import { Button } from '@/components/ui/button';
-import { CaseStudyCard } from '@/components/ui/case-study-card';
 import { ContactForm } from '@/components/ui/contact-form';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { CASE_STUDIES } from '@/lib/constants';
+import { CheckCircle, Target, Zap, Shield, Users, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
 
-const CaseStudies = () => {
+const WhyChooseUs = () => {
   const [showContactModal, setShowContactModal] = useState(false);
 
+  const advantages = [
+    {
+      icon: Users,
+      title: "Human-Guided Approach",
+      description: "Unlike automated solutions, we combine AI technology with expert human oversight to ensure your digital transformation aligns with your business goals.",
+      color: "text-primary"
+    },
+    {
+      icon: Target,
+      title: "Consultative Process",
+      description: "We start by understanding your unique challenges and objectives, then design customized solutions that address your specific business needs.",
+      color: "text-secondary"
+    },
+    {
+      icon: Zap,
+      title: "Proven Methodology",
+      description: "Our systematic approach ensures sustainable results through careful planning, implementation, and ongoing optimization.",
+      color: "text-primary"
+    },
+    {
+      icon: Shield,
+      title: "Ongoing Support",
+      description: "Digital transformation doesn't end at launch. We provide continuous monitoring, updates, and strategic guidance as your business evolves.",
+      color: "text-secondary"
+    },
+    {
+      icon: TrendingUp,
+      title: "Measurable Results",
+      description: "Every strategy we implement includes clear metrics and regular reporting so you can see the impact on your business growth.",
+      color: "text-primary"
+    },
+    {
+      icon: CheckCircle,
+      title: "Scalable Solutions",
+      description: "Our solutions grow with your business, ensuring your digital infrastructure can handle increased demand and complexity.",
+      color: "text-secondary"
+    }
+  ];
+
   return (
-    <section id="case-studies" className="py-20 bg-white">
+    <section id="why-choose-us" className="py-20 bg-white" aria-labelledby="advantages-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           variants={fadeInUp}
@@ -20,9 +58,9 @@ const CaseStudies = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
+          <h2 id="advantages-heading" className="text-3xl md:text-4xl font-bold mb-4">Why Choose NexiFront</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            See how we've helped businesses across industries achieve digital transformation success.
+            Our unique approach to digital transformation combines cutting-edge technology with human expertise to deliver sustainable business growth.
           </p>
         </motion.div>
         
@@ -30,22 +68,25 @@ const CaseStudies = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {CASE_STUDIES.map((study, index) => (
-            <motion.div key={index} variants={fadeInUp}>
-              <CaseStudyCard 
-                image={study.image}
-                industry={study.industry}
-                industryColor={study.industryColor}
-                title={study.title}
-                description={study.description}
-                resultValue={study.resultValue}
-                linkColor={study.linkColor}
-              />
-            </motion.div>
-          ))}
+          {advantages.map((advantage, index) => {
+            const IconComponent = advantage.icon;
+            return (
+              <motion.div 
+                key={index} 
+                variants={fadeInUp}
+                className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
+              >
+                <div className={`${advantage.color} mb-4`}>
+                  <IconComponent size={48} />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">{advantage.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
+              </motion.div>
+            );
+          })}
         </motion.div>
         
         <motion.div 
@@ -79,4 +120,4 @@ const CaseStudies = () => {
   );
 };
 
-export default CaseStudies;
+export default WhyChooseUs;
