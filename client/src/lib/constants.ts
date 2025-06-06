@@ -251,7 +251,7 @@ export const TEAM_MEMBERS = [
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
     name: 'Marcus Johnson',
     title: 'Marketing Director',
-    titleColor: 'text-accent',
+    titleColor: 'text-muted-foreground-dark',
     description: 'Digital marketing strategist with expertise in SEO and content marketing.',
     socials: [
       {
