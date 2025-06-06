@@ -71,7 +71,7 @@ const Philosophy = () => {
               className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
             >
               <div className={`${item.color} mb-4`}>
-                <item.icon className="h-12 w-12" />
+                <item.icon className="h-12 w-12 opacity-90" strokeWidth={1.8} />
               </div>
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
               <p className="text-gray-600 leading-relaxed">{item.description}</p>
