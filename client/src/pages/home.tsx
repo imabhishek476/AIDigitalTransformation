@@ -1,12 +1,15 @@
+import { lazy, Suspense, useEffect } from 'react';
 import Hero from '@/components/sections/Hero';
-import Services from '@/components/sections/Services';
-import Philosophy from '@/components/sections/Philosophy';
-import WhyChooseUs from '@/components/sections/CaseStudies';
-import OurMethodology from '@/components/sections/Testimonials';
-import Team from '@/components/sections/Team';
-import CallToAction from '@/components/sections/CallToAction';
+import { LazySection } from '@/components/ui/lazy-section';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
-import { useEffect } from 'react';
+
+// Lazy load non-critical sections
+const Services = lazy(() => import('@/components/sections/Services'));
+const Philosophy = lazy(() => import('@/components/sections/Philosophy'));
+const WhyChooseUs = lazy(() => import('@/components/sections/CaseStudies'));
+const OurMethodology = lazy(() => import('@/components/sections/Testimonials'));
+const Team = lazy(() => import('@/components/sections/Team'));
+const CallToAction = lazy(() => import('@/components/sections/CallToAction'));
 
 const Home = () => {
   useEffect(() => {

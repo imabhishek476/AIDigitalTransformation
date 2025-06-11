@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { StatsCard } from '@/components/ui/stats-card';
 import { AIChatbotDemo } from '@/components/ui/ai-chatbot-demo';
 import { ContactForm } from '@/components/ui/contact-form';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
@@ -127,10 +128,14 @@ const Hero = () => {
             className="lg:w-1/2"
           >
             <div className="relative rounded-xl overflow-hidden shadow-xl max-w-lg mx-auto lg:max-w-none">
-              <img 
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800" 
-                alt="Digital transformation team meeting" 
-                className="w-full h-auto aspect-[4/3] object-cover" 
+              <OptimizedImage
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+                alt="Digital transformation team meeting"
+                className="w-full h-auto"
+                aspectRatio="4/3"
+                width={1200}
+                height={800}
+                priority={true}
               />
               <button
                 onClick={toggleChatDemo}
