@@ -542,8 +542,10 @@
     opacity: 1 !important;
     position: relative !important;
     z-index: auto !important;
-    min-height: auto !important;
-    padding: 1.5rem 0 !important;
+    min-height: 50vh !important;
+    padding: 2rem 0 !important;
+    background: rgba(255, 255, 255, 0.01) !important;
+    border: 1px solid transparent !important;
   }
   
   /* Ensure content is not hidden */
@@ -551,11 +553,29 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    min-height: 200px !important;
+    background: rgba(0, 0, 0, 0.01) !important;
+  }
+  
+  /* Fix all grid layouts to use flexbox on mobile */
+  .grid, [class*="grid-"], [class*="md:grid-"], [class*="lg:grid-"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
   }
   
   /* Fix for motion components that might hide content */
-  [data-framer-component-type] {
+  [data-framer-component-type], .motion-div, [style*="opacity"] {
     opacity: 1 !important;
     transform: none !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+  
+  /* Force all text to be visible */
+  h1, h2, h3, h4, h5, h6, p, div, span {
+    color: inherit !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }

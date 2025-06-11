@@ -30,7 +30,9 @@ export function MobileDebugInfo() {
       <div>Screen: {debugInfo.screenWidth}x{debugInfo.screenHeight}</div>
       <div>Window: {debugInfo.innerWidth}x{debugInfo.innerHeight}</div>
       <div>Zoom: {debugInfo.zoom}x</div>
+      <div>Pixel Ratio: {debugInfo.devicePixelRatio}</div>
       <div>Reduced Motion: {debugInfo.prefersReducedMotion ? 'Yes' : 'No'}</div>
+      <div>Orientation: {debugInfo.orientation}</div>
     </div>
   );
 }
