@@ -474,63 +474,67 @@
   background: #a8a8a8;
 }
 
-/* iOS Accessibility Fixes */
+/* iOS Accessibility Fixes for High Zoom (1.5x+) */
 @supports (-webkit-touch-callout: none) {
   /* iOS Safari specific fixes */
   body {
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: none !important;
     -webkit-font-smoothing: antialiased;
     position: relative;
     overflow-x: hidden;
+    width: 100% !important;
   }
   
   /* Fix for iOS display zoom and dynamic type */
   .container {
     max-width: 100vw !important;
+    width: 100% !important;
     overflow-x: hidden;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
   /* Ensure sections are visible with enlarged text */
   section {
     min-height: auto !important;
-    padding: 2rem 0 !important;
+    padding: 1rem 0 !important;
     position: relative;
     z-index: 1;
+    width: 100% !important;
+    overflow-x: hidden;
   }
   
   /* Fix content rendering issues */
   main {
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: 100% !important;
     overflow-x: hidden;
   }
   
   /* Improve text readability with accessibility settings */
   h1, h2, h3, h4, h5, h6 {
-    line-height: 1.3 !important;
+    line-height: 1.2 !important;
     word-wrap: break-word;
+    font-size: clamp(1rem, 4vw, 2rem) !important;
   }
   
   p {
-    line-height: 1.6 !important;
+    line-height: 1.4 !important;
     word-wrap: break-word;
+    font-size: clamp(0.875rem, 3vw, 1.125rem) !important;
   }
   
-  /* Fix for cards and components with accessibility zoom */
-  .grid {
+  /* Force all grids to be single column on high zoom */
+  .grid, [class*="grid-"], [class*="md:grid-"], [class*="lg:grid-"] {
     display: block !important;
+    width: 100% !important;
   }
   
-  @media screen and (max-width: 768px) {
-    .grid {
-      display: block !important;
-    }
-    
-    .grid > * {
-      margin-bottom: 1rem;
-      width: 100% !important;
-    }
+  .grid > *, [class*="grid-"] > *, [class*="md:grid-"] > *, [class*="lg:grid-"] > * {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    display: block !important;
   }
 }
 
@@ -578,4 +582,45 @@
     opacity: 1 !important;
     visibility: visible !important;
   }
+}
+
+/* Specific fixes for high zoom levels (1.5x and above) */
+@media screen and (max-width: 500px) {
+  * {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .container, .mx-auto {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Force single column layout for all content */
+  .grid, .flex {
+    display: block !important;
+    flex-direction: column !important;
+  }
+  
+  .grid > *, .flex > * {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    float: none !important;
+  }
+  
+  /* Ensure all sections have visible height */
+  section {
+    min-height: 300px !important;
+    margin-bottom: 2rem !important;
+    background: rgba(0,0,0,0.02) !important;
+    border-bottom: 2px solid rgba(0,0,0,0.1) !important;
+  }
+  
+  /* Text sizing for high zoom */
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.125rem !important; }
+  p { font-size: 0.875rem !important; }
 }
