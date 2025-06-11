@@ -203,13 +203,13 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
 
         <Button 
           type="submit" 
-          className="w-full bg-secondary hover:bg-secondary/90 text-white py-3"
+          className="w-full bg-secondary hover:bg-secondary/90 text-white py-3 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
           disabled={submitMutation.isPending}
         >
           {submitMutation.isPending ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              <LoadingSpinner size="sm" className="mr-2" />
+              Sending your inquiry...
             </>
           ) : (
             'Send Inquiry'

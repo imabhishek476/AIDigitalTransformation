@@ -40,15 +40,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (error instanceof z.ZodError) {
         return res.status(400).json({
           success: false,
-          message: 'Validation error',
-          errors: error.errors
+          message: 'Please check your form data and try again',
+          errors: error.errors.map(err => ({
+            field: err.path.join('.'),
+            message: err.message
+          }))
         });
       }
       
+      // Database or server errors
       console.error('Error processing contact form:', error);
       return res.status(500).json({
         success: false,
-        message: 'Internal server error'
+        message: 'We encountered an issue processing your request. Please try again or contact us directly.',
+        error: process.env.NODE_ENV === 'development' ? (error as Error).message : undefined
       });
     }
   });

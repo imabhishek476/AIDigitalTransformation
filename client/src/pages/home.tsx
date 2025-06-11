@@ -3,6 +3,8 @@ import Hero from '@/components/sections/Hero';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
 import { preloadImages, CRITICAL_IMAGES } from '@/lib/image-preloader';
 import { usePerformanceMonitor } from '@/hooks/use-performance-monitor';
+import { useAnalytics } from '@/hooks/use-analytics';
+import { useScrollTracking } from '@/hooks/use-scroll-tracking';
 
 // Lazy load non-critical sections for better performance
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -32,6 +34,12 @@ const SectionSkeleton = () => (
 const Home = () => {
   // Monitor performance metrics
   usePerformanceMonitor();
+  
+  // Track page views and user interactions
+  useAnalytics();
+  
+  // Track scroll depth for engagement metrics
+  useScrollTracking();
   
   useEffect(() => {
     // Set page title
