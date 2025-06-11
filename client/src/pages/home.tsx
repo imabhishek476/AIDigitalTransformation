@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from 'react';
 import Hero from '@/components/sections/Hero';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
 import { preloadImages, CRITICAL_IMAGES } from '@/lib/image-preloader';
+import { usePerformanceMonitor } from '@/hooks/use-performance-monitor';
 
 // Lazy load non-critical sections for better performance
 const Services = lazy(() => import('@/components/sections/Services'));
@@ -29,6 +30,9 @@ const SectionSkeleton = () => (
 );
 
 const Home = () => {
+  // Monitor performance metrics
+  usePerformanceMonitor();
+  
   useEffect(() => {
     // Set page title
     document.title = 'NexiFront - AI-Powered Digital Transformation Agency';
