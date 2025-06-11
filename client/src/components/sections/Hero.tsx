@@ -106,18 +106,15 @@ const Hero = () => {
                 </DialogContent>
               </Dialog>
               
-              <Link href="/demo">
-                <a>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="py-4 px-8 text-base font-normal rounded-md transition-all duration-300 border-2 hover:bg-primary/5"
-                    aria-label="View interactive demos and analytics setup"
-                  >
-                    EXPLORE DEMOS
-                  </Button>
-                </a>
-              </Link>
+              <Button
+                size="lg"
+                variant="outline"
+                className="py-4 px-8 text-base font-normal rounded-md transition-all duration-300 border-2 hover:bg-primary/5"
+                aria-label="View interactive demos and analytics setup"
+                onClick={() => window.location.href = '/demo'}
+              >
+                EXPLORE DEMOS
+              </Button>
             </div>
             <div>
               <button
