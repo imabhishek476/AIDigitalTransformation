@@ -10,7 +10,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { apiRequest } from '@/lib/queryClient';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react';
+import { LoadingSpinner } from './loading-spinner';
+import { trackContactFormSubmission } from '@/lib/analytics';
+import { Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -46,24 +48,52 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
   const submitMutation = useMutation({
     mutationFn: (data: FormValues) => apiRequest('POST', '/api/contact', data),
     onSuccess: () => {
+      // Track successful form submission
+      trackContactFormSubmission();
+      
       toast({
         title: "Thank you for your inquiry!",
         description: "We'll get back to you within 24 hours.",
+        action: (
+          <div className="flex items-center gap-2">
+            <CheckCircle className="h-4 w-4 text-green-600" />
+            <span className="text-sm font-medium">Sent!</span>
+          </div>
+        ),
       });
       form.reset();
       queryClient.invalidateQueries({ queryKey: ['/api/contact'] });
       onSuccess?.();
     },
-    onError: (error) => {
+    onError: (error: any) => {
+      console.error('Contact form submission error:', error);
+      
+      const errorMessage = error?.message || error?.response?.data?.message || "Please try again or contact us directly.";
+      
       toast({
-        title: "Something went wrong",
-        description: "Please try again or contact us directly.",
+        title: "Unable to send message",
+        description: errorMessage,
         variant: "destructive",
+        action: (
+          <div className="flex items-center gap-2">
+            <AlertCircle className="h-4 w-4 text-red-600" />
+            <span className="text-sm font-medium">Error</span>
+          </div>
+        ),
       });
     },
   });
 
   const onSubmit = (data: FormValues) => {
+    // Add basic client-side validation
+    if (!data.name?.trim() || !data.email?.trim() || !data.message?.trim()) {
+      toast({
+        title: "Please fill in all required fields",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     submitMutation.mutate(data);
   };
 
