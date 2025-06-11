@@ -612,10 +612,9 @@
   
   /* Ensure all sections have visible height */
   section {
-    min-height: 300px !important;
-    margin-bottom: 2rem !important;
-    background: rgba(0,0,0,0.02) !important;
-    border-bottom: 2px solid rgba(0,0,0,0.1) !important;
+    min-height: 200px !important;
+    margin-bottom: 1rem !important;
+    padding: 2rem 0 !important;
   }
   
   /* Text sizing for high zoom */

@@ -37,46 +37,12 @@ const Home = () => {
     <>
       <Hero />
       <Services />
-      
-      {/* Test section to verify content rendering */}
-      <section style={{ 
-        backgroundColor: '#ff0000', 
-        minHeight: '300px', 
-        padding: '50px 20px',
-        display: 'block',
-        visibility: 'visible',
-        opacity: '1',
-        position: 'relative',
-        zIndex: '999'
-      }}>
-        <div style={{
-          color: 'white',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          textAlign: 'center',
-          backgroundColor: '#000000',
-          padding: '20px',
-          margin: '20px 0'
-        }}>
-          TEST SECTION - If you can see this red section, content is rendering properly
-        </div>
-        <div style={{
-          color: 'white',
-          fontSize: '18px',
-          textAlign: 'center',
-          padding: '10px'
-        }}>
-          This is a test to verify content visibility on your device
-        </div>
-      </section>
-      
       <Philosophy />
       <WhyChooseUs />
       <OurMethodology />
       <Team />
       <CallToAction />
       <ScrollToTop />
-      <MobileDebugInfo />
     </>
   );
 };
