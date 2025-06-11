@@ -504,6 +504,12 @@
     overflow-x: hidden;
   }
   
+  /* Prevent header from overlapping first section */
+  section:first-of-type {
+    margin-top: 100px !important;
+    padding-top: 2rem !important;
+  }
+  
   /* Fix content rendering issues */
   main {
     position: relative;
@@ -622,4 +628,24 @@
   h2 { font-size: 1.25rem !important; }
   h3 { font-size: 1.125rem !important; }
   p { font-size: 0.875rem !important; }
+  
+  /* Fix header overlap on iOS high zoom */
+  header {
+    height: auto !important;
+    min-height: 80px !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  /* Add top margin to first section to prevent header overlap */
+  main > section:first-child,
+  main > div:first-child {
+    margin-top: 90px !important;
+    padding-top: 2rem !important;
+  }
+  
+  /* Logo sizing for high zoom */
+  header img, header svg {
+    max-width: 120px !important;
+    height: auto !important;
+  }
 }
