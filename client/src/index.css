@@ -473,3 +473,89 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
+/* iOS Accessibility Fixes */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific fixes */
+  body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* Fix for iOS display zoom and dynamic type */
+  .container {
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure sections are visible with enlarged text */
+  section {
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Fix content rendering issues */
+  main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Improve text readability with accessibility settings */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3 !important;
+    word-wrap: break-word;
+  }
+  
+  p {
+    line-height: 1.6 !important;
+    word-wrap: break-word;
+  }
+  
+  /* Fix for cards and components with accessibility zoom */
+  .grid {
+    display: block !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid {
+      display: block !important;
+    }
+    
+    .grid > * {
+      margin-bottom: 1rem;
+      width: 100% !important;
+    }
+  }
+}
+
+/* Force visibility for all sections on mobile */
+@media screen and (max-width: 768px) {
+  section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: auto !important;
+    min-height: auto !important;
+    padding: 1.5rem 0 !important;
+  }
+  
+  /* Ensure content is not hidden */
+  .container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Fix for motion components that might hide content */
+  [data-framer-component-type] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

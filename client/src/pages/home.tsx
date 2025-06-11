@@ -7,6 +7,7 @@ import OurMethodology from '@/components/sections/Testimonials';
 import Team from '@/components/sections/Team';
 import CallToAction from '@/components/sections/CallToAction';
 import { ScrollToTop } from '@/components/ui/scroll-to-top';
+import { MobileDebugInfo } from '@/components/ui/mobile-debug-info';
 import { preloadImages, CRITICAL_IMAGES } from '@/lib/image-preloader';
 import { usePerformanceMonitor } from '@/hooks/use-performance-monitor';
 import { useAnalytics } from '@/hooks/use-analytics';
@@ -42,6 +43,7 @@ const Home = () => {
       <Team />
       <CallToAction />
       <ScrollToTop />
+      <MobileDebugInfo />
     </>
   );
 };
