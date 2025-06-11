@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import AdminDashboard from "@/pages/admin";
+import DemoFeatures from "@/pages/demo-features";
 import Letterhead from "@/pages/letterhead";
 import Invoice from "@/pages/invoice";
 import LogoDemo from "@/pages/logo-demo";
@@ -34,6 +35,7 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/admin" component={AdminDashboard} />
+          <Route path="/demo" component={DemoFeatures} />
           <Route path="/letterhead" component={Letterhead} />
           <Route path="/invoice" component={Invoice} />
           <Route path="/logo-demo" component={LogoDemo} />

@@ -4,6 +4,7 @@ import { AIChatbotDemo } from '@/components/ui/ai-chatbot-demo';
 import { ContactForm } from '@/components/ui/contact-form';
 import { OptimizedImage } from '@/components/ui/optimized-image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { useState, useRef } from 'react';
@@ -104,6 +105,19 @@ const Hero = () => {
                   <ContactForm onSuccess={() => setShowContactModal(false)} />
                 </DialogContent>
               </Dialog>
+              
+              <Link href="/demo">
+                <a>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="py-4 px-8 text-base font-normal rounded-md transition-all duration-300 border-2 hover:bg-primary/5"
+                    aria-label="View interactive demos and analytics setup"
+                  >
+                    EXPLORE DEMOS
+                  </Button>
+                </a>
+              </Link>
             </div>
             <div>
               <button
