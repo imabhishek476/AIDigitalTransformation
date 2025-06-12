@@ -565,7 +565,7 @@
   /* Menu button positioning for portrait - align with logo baseline */
   header .md\:hidden {
     margin: 0 !important;
-    margin-top: -0.25rem !important;
+    margin-top: -0.5rem !important;
     padding: 0.5rem !important;
     height: 45px !important;
     width: 45px !important;
