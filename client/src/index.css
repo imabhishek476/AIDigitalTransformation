@@ -581,6 +581,23 @@
     height: 45px !important;
     margin-top: 0 !important;
   }
+  
+  /* Center play button in demo on mobile */
+  button[aria-label*="chatbot demonstration"] {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  button[aria-label*="chatbot demonstration"] span {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  button[aria-label*="chatbot demonstration"] svg {
+    margin-right: 0.5rem !important;
+    flex-shrink: 0 !important;
+  }
 }
 
 /* Force visibility for all sections on mobile */
