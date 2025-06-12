@@ -506,14 +506,14 @@
   
   /* Prevent header from overlapping first section */
   section:first-of-type {
-    margin-top: 120px !important;
-    padding-top: 2rem !important;
+    margin-top: 85px !important;
+    padding-top: 1.5rem !important;
   }
   
   /* Additional spacing for mobile menu on iOS */
   header {
-    min-height: 90px !important;
-    padding: 0.75rem 0 !important;
+    min-height: 65px !important;
+    padding: 0.5rem 0 !important;
   }
   
   /* Fix content rendering issues */
@@ -638,21 +638,22 @@
   /* Fix header overlap on iOS high zoom */
   header {
     height: auto !important;
-    min-height: 90px !important;
-    padding: 0.75rem 0 !important;
+    min-height: 65px !important;
+    padding: 0.5rem 0 !important;
   }
   
   /* Add top margin to first section to prevent header overlap */
   main > section:first-child,
   main > div:first-child {
-    margin-top: 110px !important;
-    padding-top: 2rem !important;
+    margin-top: 80px !important;
+    padding-top: 1.5rem !important;
   }
   
-  /* Logo sizing for high zoom */
+  /* Logo sizing for high zoom - make it larger and more prominent */
   header img, header svg {
-    max-width: 120px !important;
+    max-width: 160px !important;
     height: auto !important;
+    min-width: 140px !important;
   }
   
   /* Mobile menu positioning and spacing */
