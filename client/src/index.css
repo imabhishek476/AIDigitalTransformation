@@ -660,12 +660,22 @@
   .md\:hidden {
     margin-top: 0 !important;
     padding: 0.25rem !important;
+    align-self: center !important;
   }
   
   /* Mobile menu icon sizing */
   .md\:hidden svg {
     width: 20px !important;
     height: 20px !important;
+  }
+  
+  /* Header flex alignment for mobile */
+  header .flex {
+    align-items: center !important;
+  }
+  
+  header .justify-between {
+    align-items: center !important;
   }
   
   /* Mobile menu dropdown spacing */
