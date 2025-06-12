@@ -625,6 +625,12 @@
     border-radius: 50% !important;
     aspect-ratio: 1/1 !important;
   }
+  
+  button[aria-label*="Play AI chatbot demonstration"] svg {
+    margin-left: 2px !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+  }
 }
 
 /* Force visibility for all sections on mobile */
