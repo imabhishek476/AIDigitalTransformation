@@ -506,8 +506,14 @@
   
   /* Prevent header from overlapping first section */
   section:first-of-type {
-    margin-top: 100px !important;
+    margin-top: 120px !important;
     padding-top: 2rem !important;
+  }
+  
+  /* Additional spacing for mobile menu on iOS */
+  header {
+    min-height: 90px !important;
+    padding: 0.75rem 0 !important;
   }
   
   /* Fix content rendering issues */
@@ -632,14 +638,14 @@
   /* Fix header overlap on iOS high zoom */
   header {
     height: auto !important;
-    min-height: 80px !important;
-    padding: 0.5rem 0 !important;
+    min-height: 90px !important;
+    padding: 0.75rem 0 !important;
   }
   
   /* Add top margin to first section to prevent header overlap */
   main > section:first-child,
   main > div:first-child {
-    margin-top: 90px !important;
+    margin-top: 110px !important;
     padding-top: 2rem !important;
   }
   
@@ -647,5 +653,16 @@
   header img, header svg {
     max-width: 120px !important;
     height: auto !important;
+  }
+  
+  /* Mobile menu positioning and spacing */
+  .md\:hidden {
+    margin-top: 0.5rem !important;
+  }
+  
+  /* Mobile menu dropdown spacing */
+  header .bg-white {
+    margin-top: 0.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
   }
 }
