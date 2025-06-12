@@ -658,9 +658,12 @@
   
   /* Mobile menu positioning and spacing */
   .md\:hidden {
-    margin-top: 0 !important;
-    padding: 0.25rem !important;
+    margin: 0 !important;
+    padding: 0.5rem !important;
     align-self: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   /* Mobile menu icon sizing */
@@ -670,12 +673,31 @@
   }
   
   /* Header flex alignment for mobile */
-  header .flex {
+  header .container .flex {
     align-items: center !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
   }
   
   header .justify-between {
     align-items: center !important;
+  }
+  
+  /* Override py-4 padding that pushes menu down */
+  header .py-4 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  
+  /* Force horizontal alignment between logo and menu */
+  header .flex.justify-between.items-center {
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+  
+  header .flex.justify-between.items-center > * {
+    align-self: center !important;
   }
   
   /* Mobile menu dropdown spacing */
