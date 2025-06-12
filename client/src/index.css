@@ -631,6 +631,29 @@
     display: block !important;
     flex-shrink: 0 !important;
   }
+  
+  /* Fix social media links layout on mobile */
+  a[aria-label*="Follow NexiFront"] {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0.25rem !important;
+  }
+  
+  /* Social media links container */
+  div[role="list"][aria-label*="Social"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+  }
 }
 
 /* Force visibility for all sections on mobile */
