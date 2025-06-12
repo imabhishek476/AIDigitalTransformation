@@ -506,14 +506,15 @@
   
   /* Prevent header from overlapping first section */
   section:first-of-type {
-    margin-top: 85px !important;
-    padding-top: 1.5rem !important;
+    margin-top: 60px !important;
+    padding-top: 1rem !important;
   }
   
   /* Additional spacing for mobile menu on iOS */
   header {
-    min-height: 65px !important;
-    padding: 0.5rem 0 !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    padding: 0.25rem 0 !important;
   }
   
   /* Fix content rendering issues */
@@ -556,19 +557,18 @@
   header .container .flex {
     display: flex !important;
     flex-direction: row !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: space-between !important;
-    height: 65px !important;
-    padding: 0.75rem 0 !important;
+    height: 50px !important;
+    padding: 0.25rem 0 !important;
   }
   
   /* Menu button positioning for portrait - align with logo baseline */
   header .md\:hidden {
     margin: 0 !important;
-    margin-top: -0.5rem !important;
-    padding: 0.5rem !important;
-    height: 45px !important;
-    width: 45px !important;
+    padding: 0.25rem !important;
+    height: 40px !important;
+    width: 40px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -578,8 +578,13 @@
   header a[aria-label*="NexiFront"] {
     display: flex !important;
     align-items: center !important;
-    height: 45px !important;
+    height: 40px !important;
     margin-top: 0 !important;
+  }
+  
+  /* Chatbot demo modal positioning */
+  .fixed.inset-0 {
+    padding-top: 60px !important;
   }
   
   /* Center play button in demo on mobile */
@@ -688,15 +693,16 @@
   /* Fix header overlap on iOS high zoom */
   header {
     height: auto !important;
-    min-height: 65px !important;
-    padding: 0.5rem 0 !important;
+    min-height: 50px !important;
+    max-height: 50px !important;
+    padding: 0.25rem 0 !important;
   }
   
   /* Add top margin to first section to prevent header overlap */
   main > section:first-child,
   main > div:first-child {
-    margin-top: 75px !important;
-    padding-top: 1rem !important;
+    margin-top: 55px !important;
+    padding-top: 0.5rem !important;
   }
   
   /* Logo sizing for high zoom - make it larger and more prominent */
