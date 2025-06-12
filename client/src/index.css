@@ -603,6 +603,24 @@
     margin-right: 0.5rem !important;
     flex-shrink: 0 !important;
   }
+  
+  /* Center play button overlay on hero image */
+  button[aria-label*="Play AI chatbot demonstration"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  
+  button[aria-label*="Play AI chatbot demonstration"] div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 
 /* Force visibility for all sections on mobile */
