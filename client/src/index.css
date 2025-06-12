@@ -645,8 +645,8 @@
   /* Add top margin to first section to prevent header overlap */
   main > section:first-child,
   main > div:first-child {
-    margin-top: 80px !important;
-    padding-top: 1.5rem !important;
+    margin-top: 75px !important;
+    padding-top: 1rem !important;
   }
   
   /* Logo sizing for high zoom - make it larger and more prominent */
@@ -658,7 +658,14 @@
   
   /* Mobile menu positioning and spacing */
   .md\:hidden {
-    margin-top: 0.5rem !important;
+    margin-top: 0 !important;
+    padding: 0.25rem !important;
+  }
+  
+  /* Mobile menu icon sizing */
+  .md\:hidden svg {
+    width: 20px !important;
+    height: 20px !important;
   }
   
   /* Mobile menu dropdown spacing */
