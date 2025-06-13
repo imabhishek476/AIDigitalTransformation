@@ -627,7 +627,7 @@
   }
   
   button[aria-label*="Play AI chatbot demonstration"] svg {
-    margin-left: 4px !important;
+    margin-left: 6px !important;
     display: block !important;
     flex-shrink: 0 !important;
   }
