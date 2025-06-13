@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section id="hero" className="pt-28 pb-20 bg-gradient-hero relative overflow-hidden" aria-labelledby="hero-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Chat Demo Modal */}
+        {/* AI Demo Suite Modal */}
         {showChatDemo && (
           <div 
             className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
@@ -41,12 +41,12 @@ const Hero = () => {
             <div 
               ref={demoRef}
               onClick={(e) => e.stopPropagation()} 
-              className="bg-white rounded-xl shadow-2xl w-full max-w-xl overflow-hidden"
+              className="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden max-h-[90vh] overflow-y-auto"
             >
-              <div className="bg-primary p-3 text-white flex justify-between items-center">
+              <div className="bg-primary p-4 text-white flex justify-between items-center">
                 <div>
-                  <span id="demo-title" className="font-semibold">NexiFront AI Assistant</span>
-                  <p id="demo-description" className="text-xs opacity-80">See how AI can transform patient scheduling</p>
+                  <span id="demo-title" className="font-semibold text-lg">NexiFront AI Demo Suite</span>
+                  <p id="demo-description" className="text-sm opacity-90">Experience our AI-powered solutions</p>
                 </div>
                 <button 
                   onClick={toggleChatDemo}
@@ -59,8 +59,73 @@ const Hero = () => {
                   </svg>
                 </button>
               </div>
-              <div className="h-[600px] max-h-[80vh]">
-                <AIChatbotDemo />
+              
+              <div className="p-6">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* AI Chatbot Demo */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4 text-center">AI Chatbot Assistant</h3>
+                    <div className="border rounded-lg overflow-hidden h-[500px]">
+                      <AIChatbotDemo />
+                    </div>
+                  </div>
+                  
+                  {/* Interactive Tools */}
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4 text-center">Interactive Tools</h3>
+                    <div className="space-y-4">
+                      <Link href="/demo" className="block">
+                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">ROI Calculator</h4>
+                              <p className="text-sm text-gray-600">Calculate your digital transformation ROI</p>
+                            </div>
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <Link href="/demo" className="block">
+                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">Analytics Setup</h4>
+                              <p className="text-sm text-gray-600">Configure Google Analytics in minutes</p>
+                            </div>
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <Link href="/demo" className="block">
+                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">Speed Test Tool</h4>
+                              <p className="text-sm text-gray-600">Analyze your website performance</p>
+                            </div>
+                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <div className="mt-6 pt-4 border-t">
+                        <Link href="/demo">
+                          <Button className="w-full bg-secondary hover:bg-secondary/90">
+                            View All Interactive Demos →
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -110,27 +175,11 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="py-4 px-8 text-base font-normal rounded-md transition-all duration-300 border-2 hover:bg-primary/5"
-                aria-label="View interactive demos and analytics setup"
-                onClick={() => window.location.href = '/demo'}
-              >
-                EXPLORE DEMOS
-              </Button>
-            </div>
-            <div>
-              <button
+                aria-label="Try our AI chatbot demo and interactive tools"
                 onClick={toggleChatDemo}
-                className="flex items-center text-secondary hover:text-secondary/80 transition-colors group"
-                aria-label="Open AI chatbot demonstration"
               >
-                <span className="flex items-center underline-offset-4 hover:underline">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                  See AI Chatbot Demo
-                </span>
-                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1 text-xl">&rarr;</span>
-              </button>
+                TRY AI DEMO
+              </Button>
             </div>
           </motion.div>
           
@@ -148,18 +197,6 @@ const Hero = () => {
                 height={800}
                 priority={true}
               />
-              <button
-                onClick={toggleChatDemo}
-                className="absolute inset-0 bg-black/30 flex items-center justify-center group hover:bg-black/40 transition-colors"
-                aria-label="Play AI chatbot demonstration video"
-              >
-                <div className="bg-white/90 p-3 rounded-full group-hover:scale-110 transition-transform">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                </div>
-                <span className="sr-only">Play AI Chatbot Demo</span>
-              </button>
             </div>
           </motion.div>
         </motion.div>
