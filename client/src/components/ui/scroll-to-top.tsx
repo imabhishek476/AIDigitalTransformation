@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Z_INDICES } from '@/lib/layout-stability';
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,7 +48,8 @@ export function ScrollToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 20 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-6 right-6 z-40"
+          className="fixed bottom-6 right-6"
+          style={{ zIndex: Z_INDICES.FIXED }}
         >
           <Button
             onClick={scrollToTop}

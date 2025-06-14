@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { NexiFrontLogo } from '@/components/ui/nexifront-logo';
+import { Z_INDICES } from '@/lib/layout-stability';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
@@ -49,9 +50,10 @@ const Header = () => {
       
       <header 
         className={cn(
-          "fixed w-full z-50 transition-all duration-300",
+          "fixed w-full transition-all duration-300",
           isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
         )}
+        style={{ zIndex: Z_INDICES.FIXED }}
         role="banner"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +88,10 @@ const Header = () => {
                 Get Started
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+            <DialogContent 
+              className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto"
+              style={{ zIndex: Z_INDICES.MODAL }}
+            >
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-center mb-2">
                   Start Your Digital Transformation
@@ -120,6 +125,7 @@ const Header = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white"
+            style={{ zIndex: Z_INDICES.DROPDOWN }}
           >
             <div className="container mx-auto px-4 py-4 space-y-1">
               {navLinks.map((link) => (
@@ -141,7 +147,10 @@ const Header = () => {
                       Get Started
                     </Button>
                   </DialogTrigger>
-                  <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+                  <DialogContent 
+                    className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto"
+                    style={{ zIndex: Z_INDICES.MODAL }}
+                  >
                     <DialogHeader>
                       <DialogTitle className="text-2xl font-bold text-center mb-2">
                         Start Your Digital Transformation
