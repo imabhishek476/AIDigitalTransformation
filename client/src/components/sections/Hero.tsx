@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Link } from 'wouter';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import { Z_INDICES } from '@/lib/layout-stability';
 import { useState, useRef } from 'react';
 
 const stats = [
@@ -31,7 +32,8 @@ const Hero = () => {
         {/* AI Demo Suite Modal */}
         {showChatDemo && (
           <div 
-            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" 
+            className="fixed inset-0 bg-black/50 flex items-center justify-center p-4" 
+            style={{ zIndex: Z_INDICES.MODAL_BACKDROP }}
             onClick={toggleChatDemo}
             role="dialog"
             aria-modal="true"
@@ -42,6 +44,7 @@ const Hero = () => {
               ref={demoRef}
               onClick={(e) => e.stopPropagation()} 
               className="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden max-h-[90vh] overflow-y-auto"
+              style={{ zIndex: Z_INDICES.MODAL }}
             >
               <div className="bg-primary p-4 text-white flex justify-between items-center">
                 <div>
@@ -217,7 +220,10 @@ const Hero = () => {
           >
             {/* Floating Cards - Fixed positioning */}
             <div className="relative">
-              <div className="absolute top-8 left-8 z-20 transform -translate-x-2 -translate-y-2">
+              <div 
+                className="absolute top-8 left-8 transform -translate-x-2 -translate-y-2 floating-element"
+                style={{ zIndex: Z_INDICES.DROPDOWN }}
+              >
                 <div className="bg-white rounded-xl p-3 shadow-xl border border-gray-200 backdrop-blur-sm">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -226,7 +232,10 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute bottom-8 right-8 z-20 transform translate-x-2 translate-y-2">
+              <div 
+                className="absolute bottom-8 right-8 transform translate-x-2 translate-y-2 floating-element"
+                style={{ zIndex: Z_INDICES.DROPDOWN }}
+              >
                 <div className="bg-white rounded-xl p-3 shadow-xl border border-gray-200 backdrop-blur-sm">
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
