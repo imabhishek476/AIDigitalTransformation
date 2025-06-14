@@ -148,34 +148,29 @@ const Hero = () => {
             className="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12"
           >
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
+              <div className="text-sm text-gray-500 uppercase tracking-wider mb-4 font-medium">
                 Human-Guided AI Solutions
-              </span>
+              </div>
               <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                 Trusted Guidance for <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Digital Transformation</span>
               </h1>
             </div>
             
-            {/* The NexiFront Approach Quote - Prominent Placement */}
+            {/* The NexiFront Approach Quote - Clean Design */}
             <motion.div 
               variants={fadeInUp}
               className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6 mb-8 shadow-lg"
             >
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-1 h-16 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
-                </div>
-                <div>
-                  <p className="text-lg text-gray-700 italic mb-3 font-medium leading-relaxed">
-                    "Generic AI tools create solutions in search of problems. We collaborate with you to solve your actual challenges."
-                  </p>
-                  <p className="text-sm text-primary font-semibold">— The NexiFront Approach</p>
-                </div>
+              <div>
+                <p className="text-lg text-gray-700 italic mb-3 font-medium leading-relaxed">
+                  "We don't believe in generic solutions. Every business is unique, and your digital transformation should be too."
+                </p>
+                <p className="text-sm text-primary font-semibold">— The NexiFront Approach</p>
               </div>
             </motion.div>
             
             <p className="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
-              We combine cutting-edge technology with human expertise to deliver digital solutions that actually work for your business.
+              Combining cutting-edge AI technology with human expertise to deliver personalized solutions that drive real business results.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
