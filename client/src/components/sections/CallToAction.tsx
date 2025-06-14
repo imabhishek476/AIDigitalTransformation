@@ -32,7 +32,7 @@ const CallToAction = () => {
                 Start Your Transformation Today
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
+            <DialogContent className="sm:max-w-[600px]">
               <DialogHeader>
                 <DialogTitle className="text-2xl font-bold text-center mb-2">
                   Start Your Digital Transformation

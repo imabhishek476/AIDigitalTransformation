@@ -43,7 +43,7 @@ const Hero = () => {
             <div 
               ref={demoRef}
               onClick={(e) => e.stopPropagation()} 
-              className="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden max-h-[90vh] overflow-y-auto"
+              className="bg-white rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden"
               style={{ zIndex: Z_INDICES.MODAL }}
             >
               <div className="bg-primary p-4 text-white flex justify-between items-center">
