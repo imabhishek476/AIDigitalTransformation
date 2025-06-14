@@ -151,23 +151,24 @@ const Hero = () => {
               <div className="text-sm text-gray-500 uppercase tracking-wider mb-4 font-medium">
                 Human-Guided AI Solutions
               </div>
+              
+              {/* The NexiFront Approach Quote - Moved Higher */}
+              <motion.div 
+                variants={fadeInUp}
+                className="bg-white/90 backdrop-blur-sm border border-gray-300/60 rounded-2xl p-6 mb-6 shadow-lg"
+              >
+                <div>
+                  <p className="text-lg text-gray-700 italic mb-3 font-medium leading-relaxed">
+                    "Generic AI tools create solutions in search of problems. We collaborate with you to solve your actual challenges."
+                  </p>
+                  <p className="text-sm text-primary font-semibold">— The NexiFront Approach</p>
+                </div>
+              </motion.div>
+              
               <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                 Trusted Guidance for <span className="bg-gradient-to-r from-secondary via-primary to-secondary bg-clip-text text-transparent">Digital Transformation</span>
               </h1>
             </div>
-            
-            {/* The NexiFront Approach Quote - Clean Design */}
-            <motion.div 
-              variants={fadeInUp}
-              className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-6 mb-8 shadow-lg"
-            >
-              <div>
-                <p className="text-lg text-gray-700 italic mb-3 font-medium leading-relaxed">
-                  "We don't believe in generic solutions. Every business is unique, and your digital transformation should be too."
-                </p>
-                <p className="text-sm text-primary font-semibold">— The NexiFront Approach</p>
-              </div>
-            </motion.div>
             
             <p className="text-lg text-gray-600 mb-8 max-w-xl leading-relaxed">
               Combining cutting-edge AI technology with human expertise to deliver personalized solutions that drive real business results.
@@ -200,7 +201,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="py-4 px-8 text-base font-semibold rounded-lg transition-all duration-300 border-2 border-gray-300 hover:border-primary hover:bg-primary/5 hover:text-primary transform hover:-translate-y-1"
+                className="py-4 px-8 text-base font-semibold rounded-lg transition-all duration-300 border-2 border-gray-800 text-gray-800 hover:border-primary hover:bg-primary hover:text-white transform hover:-translate-y-1"
                 aria-label="Try our AI chatbot demo and interactive tools"
                 onClick={toggleChatDemo}
               >
@@ -216,23 +217,23 @@ const Hero = () => {
             {/* Floating Cards */}
             <div className="relative">
               <div className="absolute -top-8 -left-8 z-10">
-                <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-xl p-4 shadow-xl border border-gray-300">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-gray-700">AI-Powered Analytics</span>
+                    <span className="text-sm font-medium text-gray-800">AI-Powered Analytics</span>
                   </div>
                 </div>
               </div>
               
               <div className="absolute -bottom-8 -right-8 z-10">
-                <div className="bg-white rounded-xl p-4 shadow-lg border border-gray-100">
+                <div className="bg-white rounded-xl p-4 shadow-xl border border-gray-300">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
                       <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <span className="text-sm font-medium text-gray-700">98% Success Rate</span>
+                    <span className="text-sm font-medium text-gray-800">98% Success Rate</span>
                   </div>
                 </div>
               </div>
