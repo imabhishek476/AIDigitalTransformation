@@ -27,7 +27,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="pt-28 pb-20 bg-gradient-hero relative overflow-hidden" aria-labelledby="hero-heading">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* AI Demo Suite Modal */}
         {showChatDemo && (
           <div 
@@ -141,7 +141,7 @@ const Hero = () => {
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          className="relative z-10 flex flex-col lg:flex-row items-center max-w-7xl mx-auto min-h-[700px]"
+          className="relative z-10 flex flex-col lg:flex-row items-center min-h-[700px]"
         >
           <motion.div 
             variants={fadeInUp}
@@ -175,7 +175,7 @@ const Hero = () => {
               Combining cutting-edge AI technology with human expertise to deliver personalized solutions that drive real business results.
             </p>
             
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8 max-w-lg">
               <Dialog open={showContactModal} onOpenChange={setShowContactModal}>
                 <DialogTrigger asChild>
                   <Button
@@ -213,11 +213,11 @@ const Hero = () => {
           
           <motion.div 
             variants={fadeInUp}
-            className="lg:w-1/2 relative"
+            className="lg:w-1/2 relative max-w-lg mx-auto lg:mx-0"
           >
             {/* Floating Cards */}
-            <div className="relative">
-              <div className="absolute -top-8 -left-8 z-10">
+            <div className="relative overflow-hidden">
+              <div className="absolute top-4 left-4 z-10">
                 <div className="bg-white rounded-xl p-4 shadow-xl border border-gray-300">
                   <div className="flex items-center space-x-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -226,7 +226,7 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -bottom-8 -right-8 z-10">
+              <div className="absolute bottom-4 right-4 z-10">
                 <div className="bg-white rounded-xl p-4 shadow-xl border border-gray-300">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">

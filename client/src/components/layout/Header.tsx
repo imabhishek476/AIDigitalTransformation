@@ -109,8 +109,8 @@ const Header = () => {
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </Button>
+          </div>
         </div>
-      </div>
       
       <AnimatePresence>
         {isOpen && (
