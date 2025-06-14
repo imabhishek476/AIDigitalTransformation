@@ -21,7 +21,7 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
         />
         <path
           d="M10 4 L14 4 L14 14 L22 4 L26 4 L26 24 L22 24 L22 14 L14 24 L10 24 Z"
-          fill="#E2725B"
+          fill="#34D399"
           opacity="0.8"
         />
       </g>
@@ -45,7 +45,7 @@ export function NexiFrontLogo({ className = "", width = 200, height = 60 }: Logo
         y1="38"
         x2="130"
         y2="38"
-        stroke="#E2725B"
+        stroke="#34D399"
         strokeWidth="1"
       />
     </svg>

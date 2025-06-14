@@ -21,7 +21,7 @@ export default function LogoDemo() {
                   />
                   <path
                     d="M14 6 L14 22 L17 22 L17 12 L21 20 L24 20 L24 6 L21 6 L21 16 L17 8 L14 8 Z"
-                    fill="#E2725B"
+                    fill="#34D399"
                     opacity="0.9"
                   />
                   <rect x="11" y="13" width="4" height="2" fill="#2D3748" opacity="0.3" />
@@ -29,7 +29,7 @@ export default function LogoDemo() {
                 <text x="45" y="32" fontFamily="system-ui" fontSize="16" fontWeight="400" letterSpacing="0.8px" fill="#2D3748">
                   NEXIFRONT
                 </text>
-                <line x1="45" y1="38" x2="140" y2="38" stroke="#E2725B" strokeWidth="1" />
+                <line x1="45" y1="38" x2="140" y2="38" stroke="#34D399" strokeWidth="1" />
               </svg>
             </div>
           </div>

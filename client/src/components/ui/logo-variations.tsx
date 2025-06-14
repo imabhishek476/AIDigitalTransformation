@@ -23,7 +23,7 @@ export function LogoVariation({ className = "", width = 200, height = 60, varian
             {/* Second N with color accent */}
             <path
               d="M14 6 L14 22 L17 22 L17 12 L21 20 L24 20 L24 6 L21 6 L21 16 L17 8 L14 8 Z"
-              fill="#E2725B"
+              fill="#34D399"
               opacity="0.9"
             />
             
@@ -94,7 +94,7 @@ export function LogoVariation({ className = "", width = 200, height = 60, varian
             <defs>
               <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#2D3748" stopOpacity="0.1" />
-                <stop offset="100%" stopColor="#E2725B" stopOpacity="0.1" />
+                <stop offset="100%" stopColor="#34D399" stopOpacity="0.1" />
               </linearGradient>
             </defs>
             <circle cx="13" cy="14" r="15" fill="url(#logoGradient)" />
@@ -110,7 +110,7 @@ export function LogoVariation({ className = "", width = 200, height = 60, varian
             />
             
             {/* Central divider with accent */}
-            <line x1="13" y1="8" x2="13" y2="20" stroke="#E2725B" strokeWidth="1" opacity="0.5" />
+            <line x1="13" y1="8" x2="13" y2="20" stroke="#34D399" strokeWidth="1" opacity="0.5" />
           </g>
         );
 
@@ -155,7 +155,7 @@ export function LogoVariation({ className = "", width = 200, height = 60, varian
           y1="38"
           x2="140"
           y2="38"
-          stroke="#E2725B"
+          stroke="#34D399"
           strokeWidth="1"
         />
       </svg>
