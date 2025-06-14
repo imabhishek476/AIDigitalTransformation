@@ -59,18 +59,18 @@
   --input: 40 20% 96%;
   --primary: 215 25% 20%; /* Deep charcoal primary */
   --primary-foreground: 0 0% 100%;
-  --secondary: 14 85% 60%; /* Orange accent from reference */
+  --secondary: 158 64% 52%; /* Modern mint green */
   --secondary-foreground: 0 0% 100%;
-  --accent: 40 30% 94%; /* Light warm accent */
+  --accent: 158 30% 94%; /* Light mint accent */
   --accent-foreground: 215 25% 20%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 14 85% 60%;
+  --ring: 158 64% 52%;
   --radius: 0.5rem;
   
   /* Clean gradient system inspired by reference */
   --gradient-primary: linear-gradient(135deg, hsl(215 25% 20%) 0%, hsl(215 30% 25%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(14 85% 60%) 0%, hsl(14 75% 55%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(158 54% 47%) 100%);
   --gradient-accent: linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(40 25% 94%) 100%);
   --gradient-neutral: linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(40 15% 95%) 100%);
   --gradient-surface: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);
@@ -82,7 +82,7 @@
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.10), 0 4px 6px -2px rgb(0 0 0 / 0.05);
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.10), 0 10px 10px -5px rgb(0 0 0 / 0.04);
   --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  --shadow-glow: 0 0 0 1px rgba(226, 114, 91, 0.1), 0 4px 16px rgba(226, 114, 91, 0.1);
+  --shadow-glow: 0 0 0 1px rgba(52, 211, 153, 0.1), 0 4px 16px rgba(52, 211, 153, 0.1);
 }
   .dark {
   --background: 214 55% 23%; /* Deep Navy #1B365D */
@@ -97,9 +97,9 @@
   --input: 214 30% 33%;
   --primary: 203 70% 54%; /* Tech Blue #3A9AD9 */
   --primary-foreground: 0 0% 100%;
-  --secondary: 14 100% 60%; /* Vibrant Orange #FF6B35 */
+  --secondary: 158 64% 52%; /* Modern mint green */
   --secondary-foreground: 0 0% 100%;
-  --accent: 14 100% 60%;
+  --accent: 158 64% 52%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
