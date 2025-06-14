@@ -78,43 +78,28 @@ const Hero = () => {
                     <h3 className="text-xl font-semibold mb-4 text-center">Interactive Tools</h3>
                     <div className="space-y-4">
                       <Link href="/demo" className="block">
-                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">ROI Calculator</h4>
-                              <p className="text-sm text-gray-600">Calculate your digital transformation ROI</p>
-                            </div>
-                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                        <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+                          <div>
+                            <h4 className="font-semibold text-gray-900">ROI Calculator</h4>
+                            <p className="text-sm text-gray-600">Calculate your digital transformation ROI</p>
                           </div>
                         </div>
                       </Link>
                       
                       <Link href="/demo" className="block">
-                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">Analytics Setup</h4>
-                              <p className="text-sm text-gray-600">Configure Google Analytics in minutes</p>
-                            </div>
-                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                        <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Analytics Setup</h4>
+                            <p className="text-sm text-gray-600">Configure Google Analytics in minutes</p>
                           </div>
                         </div>
                       </Link>
                       
                       <Link href="/demo" className="block">
-                        <div className="p-4 border border-gray-200 rounded-lg hover:border-primary hover:bg-primary/5 transition-all group cursor-pointer">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-gray-900 group-hover:text-primary">Speed Test Tool</h4>
-                              <p className="text-sm text-gray-600">Analyze your website performance</p>
-                            </div>
-                            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
+                        <div className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors cursor-pointer">
+                          <div>
+                            <h4 className="font-semibold text-gray-900">Speed Test Tool</h4>
+                            <p className="text-sm text-gray-600">Analyze your website performance</p>
                           </div>
                         </div>
                       </Link>
@@ -122,7 +107,7 @@ const Hero = () => {
                       <div className="mt-6 pt-4 border-t">
                         <Link href="/demo">
                           <Button className="w-full bg-secondary hover:bg-secondary/90">
-                            View All Interactive Demos →
+                            View All Interactive Demos
                           </Button>
                         </Link>
                       </div>

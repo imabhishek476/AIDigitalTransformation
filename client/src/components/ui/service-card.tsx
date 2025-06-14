@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -59,10 +58,10 @@ export const ServiceCard = ({
       </ul>
       <button 
         onClick={() => scrollToSection('#contact')}
-        className="font-semibold text-primary hover:text-primary/80 inline-flex items-center transition-all duration-300 group-hover:translate-x-1"
+        className="font-semibold text-primary hover:text-primary/80 transition-colors"
         aria-label={`Learn more about ${title}`}
       >
-        Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        Learn more
       </button>
     </article>
   );
