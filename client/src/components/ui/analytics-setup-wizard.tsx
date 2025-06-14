@@ -110,10 +110,9 @@ export function AnalyticsSetupWizard() {
         </CardDescription>
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
-            <span>Progress</span>
+            <span>Setup Status</span>
             <span>{completedSteps.length}/{steps.length} complete</span>
           </div>
-          <Progress value={progress} className="w-full" />
         </div>
       </CardHeader>
 
