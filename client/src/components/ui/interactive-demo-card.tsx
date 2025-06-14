@@ -40,7 +40,7 @@ export function InteractiveDemoCard({ title, description, demoType, metrics }: D
   };
 
   return (
-    <Card className="relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+    <Card className="relative overflow-hidden">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           {title}

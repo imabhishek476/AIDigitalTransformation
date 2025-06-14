@@ -89,26 +89,7 @@ export function ClientLogoCarousel() {
           ))}
         </div>
       </div>
-      <div className="flex justify-center mt-8 gap-4">
-        <button 
-          onClick={handlePrevious}
-          className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
-          aria-label="Previous logos"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m15 18-6-6 6-6"/>
-          </svg>
-        </button>
-        <button 
-          onClick={handleNext}
-          className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
-          aria-label="Next logos"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="m9 18 6-6-6-6"/>
-          </svg>
-        </button>
-      </div>
+      {/* Navigation arrows removed to prevent scroll indicator appearance */}
     </div>
   );
 }
