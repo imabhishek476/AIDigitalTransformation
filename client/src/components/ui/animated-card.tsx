@@ -12,8 +12,8 @@ interface AnimatedCardProps extends React.HTMLAttributes<HTMLDivElement> {
 export function AnimatedCard({ 
   children, 
   className, 
-  hoverScale = 1.02, 
-  hoverY = -4,
+  hoverScale = 1, 
+  hoverY = 0,
   delay = 0,
   ...props 
 }: AnimatedCardProps) {
@@ -21,21 +21,16 @@ export function AnimatedCard({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: hoverScale, y: hoverY }}
       transition={{ 
         duration: 0.3,
-        delay,
-        type: "spring",
-        stiffness: 300,
-        damping: 20
+        delay
       }}
       viewport={{ once: true, margin: "-100px" }}
     >
       <Card
         className={cn(
-          "transition-all duration-300 cursor-pointer group",
-          "hover:shadow-lg hover:shadow-blue-500/10",
-          "border-border/50 hover:border-primary/20",
+          "transition-colors duration-300",
+          "border-border/50",
           className
         )}
         {...props}
