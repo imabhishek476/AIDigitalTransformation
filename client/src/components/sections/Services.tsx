@@ -14,7 +14,11 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold mb-4">Our Digital Transformation Services</h2>
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Our</span>{' '}
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Digital Transformation</span>{' '}
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Services</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions designed to elevate your business in the digital landscape, powered by cutting-edge AI technologies and marketing expertise.
           </p>

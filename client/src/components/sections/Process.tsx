@@ -36,7 +36,11 @@ const Process = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Transformation Process</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Our</span>{' '}
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">Transformation</span>{' '}
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Process</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             A systematic approach to digital transformation that ensures successful outcomes for your business.
           </p>

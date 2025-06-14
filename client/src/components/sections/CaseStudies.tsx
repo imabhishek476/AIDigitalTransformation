@@ -40,7 +40,10 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 id="advantages-heading" className="text-3xl md:text-4xl font-bold mb-4">What You Get</h2>
+          <h2 id="advantages-heading" className="text-3xl md:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">What</span>{' '}
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">You Get</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Tangible business outcomes from your digital transformation investment.
           </p>
