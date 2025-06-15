@@ -201,10 +201,10 @@ const Hero = () => {
           
           <motion.div 
             variants={fadeInUp}
-            className="lg:w-1/2 relative max-w-lg mx-auto lg:mx-0"
+            className="lg:w-1/2 relative max-w-lg mx-auto lg:mx-0 flex justify-center"
           >
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 relative">
+            <div className="relative w-full">
+              <div className="rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 relative">
                 <OptimizedImage
                   src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
                   alt="Digital transformation team meeting"
