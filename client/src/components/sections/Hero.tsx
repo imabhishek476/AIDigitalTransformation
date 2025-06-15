@@ -204,7 +204,7 @@ const Hero = () => {
             className="lg:w-1/2 relative max-w-lg mx-auto lg:mx-0 flex justify-center"
           >
             <div className="relative w-full">
-              <div className="rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 relative cursor-pointer group">
                 <OptimizedImage
                   src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
                   alt="Digital transformation team meeting"
@@ -215,6 +215,34 @@ const Hero = () => {
                   priority={true}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+                
+                {/* Play Button Overlay */}
+                <div 
+                  className="absolute inset-0 flex items-center justify-center"
+                  onClick={toggleChatDemo}
+                >
+                  <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl border border-white/20 group-hover:bg-white transition-all duration-300 group-hover:scale-110">
+                    <div className="bg-primary rounded-full p-3">
+                      <svg 
+                        className="w-8 h-8 text-white ml-1" 
+                        fill="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Demo Label */}
+                <div className="absolute bottom-4 left-4">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
+                    <div className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-800">Try AI Demo</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
