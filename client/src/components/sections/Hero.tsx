@@ -154,7 +154,7 @@ const Hero = () => {
               </motion.div>
               
               <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-                <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">Trusted Guidance for</span>{' '}
+                <span className="bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 bg-clip-text text-transparent">Trusted Guidance for</span>{' '}
                 <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Digital Transformation</span>
               </h1>
             </div>
@@ -203,36 +203,7 @@ const Hero = () => {
             variants={fadeInUp}
             className="lg:w-1/2 relative max-w-lg mx-auto lg:mx-0"
           >
-            {/* Floating Cards - Fixed positioning */}
             <div className="relative">
-              <div 
-                className="absolute top-8 left-8 transform -translate-x-2 -translate-y-2 floating-element"
-                style={{ zIndex: Z_INDICES.DROPDOWN }}
-              >
-                <div className="bg-white rounded-xl p-3 shadow-xl border border-gray-200 backdrop-blur-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-xs font-medium text-gray-800 whitespace-nowrap">AI Analytics</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div 
-                className="absolute bottom-8 right-8 transform translate-x-2 translate-y-2 floating-element"
-                style={{ zIndex: Z_INDICES.DROPDOWN }}
-              >
-                <div className="bg-white rounded-xl p-3 shadow-xl border border-gray-200 backdrop-blur-sm">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-6 h-6 bg-gradient-to-r from-primary to-secondary rounded-lg flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <span className="text-xs font-medium text-gray-800 whitespace-nowrap">98% Success</span>
-                  </div>
-                </div>
-              </div>
-              
               <div className="rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500 relative">
                 <OptimizedImage
                   src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
