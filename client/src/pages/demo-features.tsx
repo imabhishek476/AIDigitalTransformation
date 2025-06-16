@@ -9,7 +9,7 @@ import { BarChart3, Settings, Zap } from 'lucide-react';
 
 export default function DemoFeatures() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50/50 pt-24">
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
