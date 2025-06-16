@@ -26,14 +26,14 @@ export function EnhancedToastProvider() {
               "relative flex w-full items-center space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg",
               "bg-white border-border",
               toast.variant === "destructive" && "border-red-200 bg-red-50",
-              toast.variant === "default" && "border-green-200 bg-green-50"
+              toast.variant === "default" && "border-emerald-200 bg-emerald-50"
             )}
           >
             <div className="flex-shrink-0">
               {toast.variant === "destructive" ? (
                 <AlertCircle className="h-5 w-5 text-red-600" />
               ) : (
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-emerald-600" />
               )}
             </div>
             

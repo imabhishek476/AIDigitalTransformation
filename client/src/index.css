@@ -59,18 +59,18 @@
   --input: 40 20% 96%;
   --primary: 215 25% 20%; /* Deep charcoal primary */
   --primary-foreground: 0 0% 100%;
-  --secondary: 158 64% 52%; /* Modern mint green */
+  --secondary: 160 70% 45%; /* Warm sophisticated emerald */
   --secondary-foreground: 0 0% 100%;
-  --accent: 158 30% 94%; /* Light mint accent */
+  --accent: 160 40% 92%; /* Light emerald accent */
   --accent-foreground: 215 25% 20%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --ring: 158 64% 52%;
+  --ring: 160 70% 45%;
   --radius: 0.5rem;
   
   /* Clean gradient system inspired by reference */
   --gradient-primary: linear-gradient(135deg, hsl(215 25% 20%) 0%, hsl(215 30% 25%) 100%);
-  --gradient-secondary: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(158 54% 47%) 100%);
+  --gradient-secondary: linear-gradient(135deg, hsl(160 70% 45%) 0%, hsl(162 65% 40%) 100%);
   --gradient-accent: linear-gradient(135deg, hsl(40 30% 96%) 0%, hsl(40 25% 94%) 100%);
   --gradient-neutral: linear-gradient(135deg, hsl(40 20% 98%) 0%, hsl(40 15% 95%) 100%);
   --gradient-surface: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.8) 100%);

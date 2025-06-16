@@ -155,7 +155,7 @@ export function LogoVariation({ className = "", width = 200, height = 60, varian
           y1="38"
           x2="140"
           y2="38"
-          stroke="#34D399"
+          stroke="#059669"
           strokeWidth="1"
         />
       </svg>
