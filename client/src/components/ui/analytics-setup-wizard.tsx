@@ -216,13 +216,13 @@ export function AnalyticsSetupWizard() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-green-50 border border-green-200 rounded-lg p-4"
+            className="bg-emerald-50 border border-emerald-200 rounded-lg p-4"
           >
-            <div className="flex items-center gap-2 text-green-700 font-medium mb-2">
+            <div className="flex items-center gap-2 text-emerald-700 font-medium mb-2">
               <CheckCircle className="h-5 w-5" />
               Analytics Setup Complete!
             </div>
-            <p className="text-sm text-green-600">
+            <p className="text-sm text-emerald-600">
               Your website is now tracking visitor behavior, form submissions, and performance metrics. 
               Data will appear in Google Analytics within 24-48 hours.
             </p>

@@ -24,13 +24,13 @@ export default function LayoutGuide() {
         <div className="grid lg:grid-cols-3 gap-6 mb-8">
           
           {/* Mobile Experience */}
-          <Card className="border-l-4 border-l-green-500">
+          <Card className="border-l-4 border-l-emerald-500">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
-                <Smartphone className="text-green-600" size={24} />
+                <Smartphone className="text-emerald-600" size={24} />
                 <span>1. Mobile Phone Experience</span>
               </CardTitle>
-              <Badge className="bg-green-100 text-green-800 w-fit">MOST CRITICAL</Badge>
+              <Badge className="bg-emerald-100 text-emerald-800 w-fit">MOST CRITICAL</Badge>
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-sm text-gray-600">
@@ -40,24 +40,24 @@ export default function LayoutGuide() {
               
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-sm">
-                  <CheckCircle size={16} className="text-green-500" />
+                  <CheckCircle size={16} className="text-emerald-500" />
                   <span>Text is readable without zooming</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm">
-                  <CheckCircle size={16} className="text-green-500" />
+                  <CheckCircle size={16} className="text-emerald-500" />
                   <span>Buttons are easy to tap with fingers</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm">
-                  <CheckCircle size={16} className="text-green-500" />
+                  <CheckCircle size={16} className="text-emerald-500" />
                   <span>Contact form works smoothly</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm">
-                  <CheckCircle size={16} className="text-green-500" />
+                  <CheckCircle size={16} className="text-emerald-500" />
                   <span>Page loads quickly</span>
                 </div>
               </div>
               
-              <p className="text-xs text-green-700 bg-green-50 p-2 rounded">
+              <p className="text-xs text-emerald-700 bg-emerald-50 p-2 rounded">
                 ✓ Your site already handles this well - navigation collapses to a menu button, 
                 text stays readable, and forms work on all phone sizes.
               </p>
