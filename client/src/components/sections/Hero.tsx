@@ -238,8 +238,8 @@ const Hero = () => {
                 <div className="absolute bottom-4 left-4">
                   <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm font-medium text-gray-800">Try AI Demo</span>
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-medium text-gray-800">Experience Our AI</span>
                     </div>
                   </div>
                 </div>
