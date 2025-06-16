@@ -108,7 +108,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Full Name *</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Smith" {...field} />
+                  <Input placeholder="Jane Doe" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -121,7 +121,7 @@ export function ContactForm({ onSuccess }: ContactFormProps) {
               <FormItem>
                 <FormLabel>Email Address *</FormLabel>
                 <FormControl>
-                  <Input placeholder="john@company.com" type="email" {...field} />
+                  <Input placeholder="Jane@company.com" type="email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
