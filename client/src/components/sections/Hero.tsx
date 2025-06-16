@@ -154,8 +154,8 @@ const Hero = () => {
               </motion.div>
               
               <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
-                <span className="bg-gradient-to-r from-emerald-600 via-green-500 to-teal-500 bg-clip-text text-transparent">Trusted Guidance for</span>{' '}
-                <span className="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Digital Transformation</span>
+                <span className="bg-gradient-to-r from-emerald-700 via-teal-600 to-slate-600 bg-clip-text text-transparent">Trusted Guidance for</span>{' '}
+                <span className="bg-gradient-to-r from-emerald-700 via-teal-600 to-slate-600 bg-clip-text text-transparent">Digital Transformation</span>
               </h1>
             </div>
             
