@@ -37,7 +37,7 @@ export const ServiceCard = ({
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
-            <div className="rounded-full bg-emerald-500 p-1.5 mt-0.5 mr-3 flex-shrink-0 w-5 h-5 flex items-center justify-center">
+            <div className="rounded-full bg-emerald-500 p-2 mt-0.5 mr-3 flex-shrink-0">
               <svg 
                 className="text-white h-3 w-3" 
                 fill="none" 
