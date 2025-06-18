@@ -222,7 +222,7 @@ const Hero = () => {
                   onClick={toggleChatDemo}
                 >
                   <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl border border-white/20 group-hover:bg-white transition-all duration-300 group-hover:scale-110">
-                    <div className="bg-primary rounded-full p-3">
+                    <div className="bg-emerald-600 rounded-full p-3">
                       <svg 
                         className="w-8 h-8 text-white ml-1" 
                         fill="currentColor" 
@@ -238,7 +238,7 @@ const Hero = () => {
                 <div className="absolute bottom-4 left-4">
                   <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                       <span className="text-sm font-medium text-gray-800">Experience Our AI</span>
                     </div>
                   </div>
