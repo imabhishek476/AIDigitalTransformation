@@ -163,40 +163,7 @@ const Hero = () => {
               Combining cutting-edge AI technology with human expertise to deliver personalized solutions that drive real business results.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-8 max-w-lg">
-              <Dialog open={showContactModal} onOpenChange={setShowContactModal}>
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-white py-4 px-8 text-base font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                    aria-label="Get started with NexiFront services - open contact form"
-                  >
-                    GET STARTED
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[600px] max-h-[90vh] overflow-y-auto">
-                  <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold text-center mb-2">
-                      Start Your Digital Transformation
-                    </DialogTitle>
-                    <p className="text-muted-foreground text-center mb-6">
-                      Tell us about your project and we'll get back to you within 24 hours with a personalized proposal.
-                    </p>
-                  </DialogHeader>
-                  <ContactForm onSuccess={() => setShowContactModal(false)} />
-                </DialogContent>
-              </Dialog>
-              
-              <Button
-                size="lg"
-                variant="outline"
-                className="py-4 px-8 text-base font-semibold rounded-lg transition-all duration-300 border-2 border-gray-800 text-gray-800 hover:border-primary hover:bg-primary hover:text-white transform hover:-translate-y-1"
-                aria-label="Try our AI chatbot demo and interactive tools"
-                onClick={toggleChatDemo}
-              >
-                TRY AI DEMO
-              </Button>
-            </div>
+
           </motion.div>
           
           <motion.div 
