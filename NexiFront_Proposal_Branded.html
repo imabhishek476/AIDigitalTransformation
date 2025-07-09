@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiFront Digital Marketing Proposal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #059669, #0d9488);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .logo::after {
+            content: "N";
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .company-name {
+            font-size: 42px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #059669, #0d9488);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #6b7280;
+            font-size: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+            background: #059669;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .info-section h4 {
+            font-weight: bold;
+            color: #111827;
+            margin-bottom: 15px;
+        }
+        
+        .info-section p {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #059669;
+        }
+        
+        .highlight-box h3 {
+            color: #059669;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .stat-box {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            background: #059669;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #111827;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .service-section {
+            margin: 30px 0;
+        }
+        
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 3px solid #059669;
+        }
+        
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: #059669;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .check-icon::after {
+            content: "✓";
+            color: white;
+            font-size: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .service-content h4 {
+            color: #111827;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .service-content p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        .pricing-section {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .pricing-title {
+            color: #059669;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .payment-schedule {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .payment-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #059669;
+        }
+        
+        .payment-item strong {
+            color: #059669;
+        }
+        
+        .steps-section {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            width: 30px;
+            height: 30px;
+            background: #059669;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        
+        .step-content h4 {
+            color: #111827;
+            margin-bottom: 5px;
+        }
+        
+        .step-content p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .btn-primary {
+            background: #059669;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #059669;
+            padding: 12px 30px;
+            border: 2px solid #059669;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .contact-info {
+            color: #6b7280;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            color: #059669;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column, .three-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .payment-schedule {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo"></div>
+            <h1 class="company-name">NexiFront Digital Solutions</h1>
+            <p class="subtitle">Digital Marketing Proposal</p>
+            <div style="margin-top: 20px;">
+                <span class="badge">Standard Package</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Proposal for [Client Company Name]
+            </h2>
+            <div class="two-column">
+                <div class="info-section">
+                    <h4>Client Details</h4>
+                    <p><strong>Company:</strong> [Client Company Name]</p>
+                    <p><strong>Industry:</strong> [Client Industry]</p>
+                    <p><strong>Website:</strong> [Client Website]</p>
+                    <p><strong>Contact:</strong> [Client Name] | [Client Email]</p>
+                </div>
+                <div class="info-section">
+                    <h4>Proposal Information</h4>
+                    <p><strong>Proposal Date:</strong> [Current Date]</p>
+                    <p><strong>Valid Until:</strong> [Proposal Expiry Date]</p>
+                    <p><strong>Package:</strong> Standard Digital Marketing</p>
+                    <p><strong>Duration:</strong> 12 Months</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Executive Summary
+            </h2>
+            <div class="highlight-box">
+                <h3>📦 Standard Digital Marketing Package</h3>
+                <p>This comprehensive package is designed to provide consistent, high-quality digital marketing services that boost visibility, engagement, and conversions. Ideal for businesses looking for a strong ongoing presence across SEO, social media, and content marketing.</p>
+            </div>
+            
+            <div class="three-column">
+                <div class="stat-box">
+                    <div class="stat-icon"></div>
+                    <div class="stat-value">12 Months</div>
+                    <div class="stat-label">Service Duration</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"></div>
+                    <div class="stat-value">Premium</div>
+                    <div class="stat-label">Service Level</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"></div>
+                    <div class="stat-value">[Total Cost]</div>
+                    <div class="stat-label">Investment</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                SEO & Website Optimization
+            </h2>
+            <div class="service-section">
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>In-Depth SEO Audit</h4>
+                        <p>Comprehensive analysis of your website's structure, performance, and SEO compliance</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Advanced Keyword Research</h4>
+                        <p>Identification of high-performing and relevant keywords to target</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Competitor Analysis</h4>
+                        <p>Learn what's working for your competitors and leverage it</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Local SEO Optimization</h4>
+                        <p>Optimize for "near me" searches with local keywords and GMB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Content Marketing
+            </h2>
+            <div class="service-section">
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>2-4 Blogs/Articles per Month</h4>
+                        <p>SEO-optimized, informative, and engaging content that drives traffic</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Landing Page Creation</h4>
+                        <p>Content refresh and optimization to improve conversion rates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Social Media Marketing
+            </h2>
+            <div class="highlight-box">
+                <h4 style="color: #059669; margin-bottom: 10px;">4 Platforms Coverage</h4>
+                <p>Facebook, Instagram, LinkedIn, Twitter (customizable based on your audience)</p>
+            </div>
+            <div class="service-section">
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>8-10 Posts per Month</h4>
+                        <p>Branded graphics, captions, hashtags, and publishing</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Engagement Tracking</h4>
+                        <p>Monitor likes, shares, comments, and audience behavior</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Email Marketing & Analytics
+            </h2>
+            <div class="service-section">
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>2 Campaigns per Month</h4>
+                        <p>Well-designed email blasts or newsletters</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Advanced Segmentation</h4>
+                        <p>Personalized messaging based on customer behavior</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Monthly Reports</h4>
+                        <p>Performance summary across all channels with actionable insights</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <div class="check-icon"></div>
+                    <div class="service-content">
+                        <h4>Goal Tracking</h4>
+                        <p>Track conversions, traffic, and leads with strategic recommendations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="pricing-section">
+                <h3 class="pricing-title">Investment & Payment Schedule</h3>
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <span style="font-size: 28px; font-weight: bold; color: #059669;">Total Investment: $[Total Amount]</span>
+                </div>
+                <div class="payment-schedule">
+                    <div class="payment-item">
+                        <strong>Project Kickoff</strong><br>
+                        $[Amount] due upon contract signing
+                    </div>
+                    <div class="payment-item">
+                        <strong>End of 3 months</strong><br>
+                        $[Amount] due
+                    </div>
+                    <div class="payment-item">
+                        <strong>End of 6 months</strong><br>
+                        $[Amount] due
+                    </div>
+                    <div class="payment-item">
+                        <strong>End of 9 months</strong><br>
+                        $[Amount] due
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">
+                <span class="icon"></span>
+                Next Steps
+            </h2>
+            <div class="steps-section">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Review & Approve</h4>
+                        <p>Review this proposal and let us know if you have any questions or modifications</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Contract Signing</h4>
+                        <p>Sign the business agreement and make the initial payment to secure your start date</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Project Kickoff</h4>
+                        <p>Begin with comprehensive audit and strategy development within 2 weeks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="color: #059669; margin-bottom: 20px;">Ready to Get Started?</h2>
+            <p style="color: #6b7280; margin-bottom: 30px;">
+                We're excited to help you achieve your digital marketing goals. 
+                This proposal is valid for 30 days from the date above.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Accept Proposal</a>
+                <a href="#" class="btn-secondary">Schedule Call</a>
+            </div>
+            <div class="contact-info">
+                <p><strong>Contact:</strong> [Your Name] | [Your Email] | [Your Phone]</p>
+                <p><strong>NexiFront Digital Solutions</strong> | nexifront.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
