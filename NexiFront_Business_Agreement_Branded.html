@@ -1,388 +1,427 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexiFront Business Agreement</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .logo {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #059669, #0d9488);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-        }
-        
-        .logo::after {
-            content: "N";
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        .company-name {
-            font-size: 32px;
-            font-weight: bold;
-            background: linear-gradient(135deg, #059669, #0d9488);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            color: #6b7280;
-            font-size: 18px;
-        }
-        
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #059669;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .icon {
-            width: 20px;
-            height: 20px;
-            background: #059669;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        
-        .info-section h4 {
-            font-weight: bold;
-            color: #111827;
-            margin-bottom: 15px;
-        }
-        
-        .info-section p {
-            margin-bottom: 8px;
-            font-size: 14px;
-            color: #6b7280;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #059669;
-        }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .service-item {
-            background: #f9fafb;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid #059669;
-        }
-        
-        .service-item h5 {
-            color: #111827;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-        
-        .service-item ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .service-item li {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 4px;
-            padding-left: 15px;
-            position: relative;
-        }
-        
-        .service-item li::before {
-            content: "•";
-            color: #059669;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-        
-        .terms-section {
-            margin: 20px 0;
-        }
-        
-        .terms-section h4 {
-            color: #111827;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .terms-section p, .terms-section li {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-        
-        .signature-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 30px;
-        }
-        
-        .signature-box {
-            text-align: center;
-            padding: 20px;
-            border: 2px dashed #d1d5db;
-            border-radius: 8px;
-        }
-        
-        .signature-box h4 {
-            color: #111827;
-            margin-bottom: 20px;
-        }
-        
-        .signature-line {
-            border-bottom: 1px solid #d1d5db;
-            margin: 15px 0;
-            height: 40px;
-        }
-        
-        .signature-box p {
-            color: #6b7280;
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        
-        .badge {
-            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
-            color: #059669;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            display: inline-block;
-        }
-        
-        @media (max-width: 768px) {
-            .two-column, .signature-section {
-                grid-template-columns: 1fr;
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>NexiFront Business Agreement</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
             }
-            
+
+            body {
+                font-family: "Arial", sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background: linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%);
+                min-height: 100vh;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .header {
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, #059669, #0d9488);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+            }
+
+            .logo::after {
+                content: "N";
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .company-name {
+                font-size: 32px;
+                font-weight: bold;
+                background: linear-gradient(135deg, #059669, #0d9488);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-bottom: 10px;
+            }
+
+            .subtitle {
+                color: #6b7280;
+                font-size: 18px;
+            }
+
+            .card {
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-title {
+                font-size: 20px;
+                font-weight: bold;
+                color: #059669;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                background: #059669;
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .two-column {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+            }
+
+            .info-section h4 {
+                font-weight: bold;
+                color: #111827;
+                margin-bottom: 15px;
+            }
+
+            .info-section p {
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: #6b7280;
+            }
+
+            .highlight-box {
+                background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+                padding: 20px;
+                border-radius: 8px;
+                margin: 20px 0;
+                border-left: 4px solid #059669;
+            }
+
             .service-grid {
-                grid-template-columns: 1fr;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+                margin: 20px 0;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo"></div>
-            <h1 class="company-name">NexiFront Digital Solutions</h1>
-            <p class="subtitle">Business Agreement - Digital Marketing Services</p>
-            <div style="margin-top: 15px;">
-                <span class="badge">Standard Package</span>
-            </div>
-        </div>
 
-        <div class="card">
-            <h2 class="card-title">
-                <span class="icon"></span>
-                Service Provider & Client Information
-            </h2>
-            <div class="two-column">
-                <div class="info-section">
-                    <h4>Service Provider</h4>
-                    <p><strong>Company:</strong> NexiFront Digital Solutions</p>
-                    <p><strong>Address:</strong> [Company Address]</p>
-                    <p><strong>Contact:</strong> [Phone] | [Email]</p>
-                    <p><strong>Website:</strong> nexifront.com</p>
-                </div>
-                <div class="info-section">
-                    <h4>Client</h4>
-                    <p><strong>Company:</strong> [Client Company Name]</p>
-                    <p><strong>Address:</strong> [Client Address]</p>
-                    <p><strong>Contact:</strong> [Client Phone] | [Client Email]</p>
-                    <p><strong>Website:</strong> [Client Website]</p>
-                </div>
-            </div>
-        </div>
+            .service-item {
+                background: #f9fafb;
+                padding: 15px;
+                border-radius: 8px;
+                border-left: 3px solid #059669;
+            }
 
-        <div class="card">
-            <h2 class="card-title">
-                <span class="icon"></span>
-                Service Package Details
-            </h2>
-            <div class="highlight-box">
-                <h3 style="color: #059669; margin-bottom: 10px;">Standard Digital Marketing Package</h3>
-                <p>Comprehensive digital marketing services designed to boost visibility, engagement, and conversions through SEO, social media, and content marketing.</p>
-            </div>
-            
-            <div class="service-grid">
-                <div class="service-item">
-                    <h5>SEO & Website Optimization</h5>
-                    <ul>
-                        <li>In-depth SEO audit and analysis</li>
-                        <li>Advanced keyword research</li>
-                        <li>Competitor analysis</li>
-                        <li>Schema markup & internal linking</li>
-                        <li>Local SEO optimization</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <h5>Content Marketing</h5>
-                    <ul>
-                        <li>2-4 blogs/articles per month</li>
-                        <li>Landing page creation</li>
-                        <li>Content refresh and optimization</li>
-                        <li>SEO-optimized content</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <h5>Social Media Marketing</h5>
-                    <ul>
-                        <li>4 platforms management</li>
-                        <li>8-10 posts per month</li>
-                        <li>Engagement tracking</li>
-                        <li>Branded graphics and captions</li>
-                    </ul>
-                </div>
-                <div class="service-item">
-                    <h5>Additional Services</h5>
-                    <ul>
-                        <li>2 email campaigns per month</li>
-                        <li>Quality link acquisition</li>
-                        <li>Monthly analytics reporting</li>
-                        <li>GMB optimization</li>
-                        <li>Conversion rate optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            .service-item h5 {
+                color: #111827;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
 
-        <div class="card">
-            <h2 class="card-title">
-                <span class="icon"></span>
-                Terms & Conditions
-            </h2>
-            
-            <div class="terms-section">
-                <h4>Service Duration</h4>
-                <p>Total duration for digital marketing services: 12 months from project kickoff date.</p>
+            .service-item ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .service-item li {
+                color: #6b7280;
+                font-size: 14px;
+                margin-bottom: 4px;
+                padding-left: 15px;
+                position: relative;
+            }
+
+            .service-item li::before {
+                content: "•";
+                color: #059669;
+                position: absolute;
+                left: 0;
+                font-weight: bold;
+            }
+
+            .terms-section {
+                margin: 20px 0;
+            }
+
+            .terms-section h4 {
+                color: #111827;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .terms-section p,
+            .terms-section li {
+                color: #6b7280;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .signature-section {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                margin-top: 30px;
+            }
+
+            .signature-box {
+                text-align: center;
+                padding: 20px;
+                border: 2px dashed #d1d5db;
+                border-radius: 8px;
+            }
+
+            .signature-box h4 {
+                color: #111827;
+                margin-bottom: 20px;
+            }
+
+            .signature-line {
+                border-bottom: 1px solid #d1d5db;
+                margin: 15px 0;
+                height: 40px;
+            }
+
+            .signature-box p {
+                color: #6b7280;
+                font-size: 14px;
+                margin: 10px 0;
+            }
+
+            .badge {
+                background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+                color: #059669;
+                padding: 5px 15px;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: bold;
+                display: inline-block;
+            }
+
+            @media (max-width: 768px) {
+                .two-column,
+                .signature-section {
+                    grid-template-columns: 1fr;
+                }
+
+                .service-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo"></div>
+                <h1 class="company-name">NexiFront Digital Solutions</h1>
+                <p class="subtitle">
+                    Business Agreement - Digital Marketing Services
+                </p>
+                <div style="margin-top: 15px">
+                    <span class="badge">Standard Package</span>
+                </div>
             </div>
-            
-            <div class="terms-section">
-                <h4>Payment Terms</h4>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon"></span>
+                    Service Provider & Client Information
+                </h2>
+                <div class="two-column">
+                    <div class="info-section">
+                        <h4>Service Provider</h4>
+                        <p>
+                            <strong>Company:</strong> NexiFront Digital
+                            Solutions
+                        </p>
+                        <p><strong>Address:</strong> [Company Address]</p>
+                        <p><strong>Contact:</strong> [Phone] | [Email]</p>
+                        <p><strong>Website:</strong> nexifront.com</p>
+                    </div>
+                    <div class="info-section">
+                        <h4>Client</h4>
+                        <p><strong>Company:</strong> [Client Company Name]</p>
+                        <p><strong>Address:</strong> [Client Address]</p>
+                        <p>
+                            <strong>Contact:</strong> [Client Phone] | [Client
+                            Email]
+                        </p>
+                        <p><strong>Website:</strong> [Client Website]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon"></span>
+                    Service Package Details
+                </h2>
                 <div class="highlight-box">
-                    <ul style="list-style: none; padding: 0;">
-                        <li>• Project Kickoff: $[Amount] due upon contract signing</li>
-                        <li>• End of 3 months: $[Amount] due</li>
-                        <li>• End of 6 months: $[Amount] due</li>
-                        <li>• End of 9 months: $[Amount] due</li>
-                        <li style="font-weight: bold; color: #059669;">• Total Project Cost: $[Total Amount]</li>
+                    <h3 style="color: #059669; margin-bottom: 10px">
+                        Standard Digital Marketing Package
+                    </h3>
+                    <p>
+                        Comprehensive digital marketing services designed to
+                        boost visibility, engagement, and conversions through
+                        SEO, social media, and content marketing.
+                    </p>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h5>SEO & Website Optimization</h5>
+                        <ul>
+                            <li>In-depth SEO audit and analysis</li>
+                            <li>Advanced keyword research</li>
+                            <li>Competitor analysis</li>
+                            <li>Schema markup & internal linking</li>
+                            <li>Local SEO optimization</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h5>Content Marketing</h5>
+                        <ul>
+                            <li>2-4 blogs/articles per month</li>
+                            <li>Landing page creation</li>
+                            <li>Content refresh and optimization</li>
+                            <li>SEO-optimized content</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h5>Social Media Marketing</h5>
+                        <ul>
+                            <li>4 platforms management</li>
+                            <li>8-10 posts per month</li>
+                            <li>Engagement tracking</li>
+                            <li>Branded graphics and captions</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h5>Additional Services</h5>
+                        <ul>
+                            <li>2 email campaigns per month</li>
+                            <li>Quality link acquisition</li>
+                            <li>Monthly analytics reporting</li>
+                            <li>GMB optimization</li>
+                            <li>Conversion rate optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon"></span>
+                    Terms & Conditions
+                </h2>
+
+                <div class="terms-section">
+                    <h4>Service Duration</h4>
+                    <p>
+                        Total duration for digital marketing services: 12 months
+                        from project kickoff date.
+                    </p>
+                </div>
+
+                <div class="terms-section">
+                    <h4>Payment Terms</h4>
+                    <div class="highlight-box">
+                        <ul style="list-style: none; padding: 0">
+                            <li>
+                                • Project Kickoff: $[Amount] due upon contract
+                                signing
+                            </li>
+                            <li>• End of 3 months: $[Amount] due</li>
+                            <li>• End of 6 months: $[Amount] due</li>
+                            <li>• End of 9 months: $[Amount] due</li>
+                            <li style="font-weight: bold; color: #059669">
+                                • Total Project Cost: $[Total Amount]
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="terms-section">
+                    <h4>Deliverables & Timeline</h4>
+                    <ul>
+                        <li>
+                            Monthly performance reports delivered by the 5th of
+                            each month
+                        </li>
+                        <li>Quarterly strategic reviews</li>
+                        <li>24-48 hour response time for communications</li>
+                        <li>Content calendar provided monthly in advance</li>
+                        <li>
+                            Initial audit and strategy completion within 2 weeks
+                            of kickoff
+                        </li>
                     </ul>
                 </div>
-            </div>
 
-            <div class="terms-section">
-                <h4>Deliverables & Timeline</h4>
-                <ul>
-                    <li>Monthly performance reports delivered by the 5th of each month</li>
-                    <li>Quarterly strategic reviews</li>
-                    <li>24-48 hour response time for communications</li>
-                    <li>Content calendar provided monthly in advance</li>
-                    <li>Initial audit and strategy completion within 2 weeks of kickoff</li>
-                </ul>
-            </div>
-
-            <div class="terms-section">
-                <h4>Termination Clause</h4>
-                <p>Either party may terminate this agreement with 30 days written notice. Client remains responsible for payment of services rendered up to termination date.</p>
-            </div>
-
-            <div class="terms-section">
-                <h4>Intellectual Property</h4>
-                <p>All content created specifically for the client becomes client property upon final payment. NexiFront retains rights to methodologies, tools, and general marketing strategies.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="card-title">
-                <span class="icon"></span>
-                Agreement Signatures
-            </h2>
-            <div class="signature-section">
-                <div class="signature-box">
-                    <h4>NexiFront Digital Solutions</h4>
-                    <div class="signature-line"></div>
-                    <p>Authorized Representative Signature</p>
-                    <p>Name: _________________________</p>
-                    <p>Title: _________________________</p>
-                    <p>Date: _________________________</p>
+                <div class="terms-section">
+                    <h4>Termination Clause</h4>
+                    <p>
+                        Either party may terminate this agreement with 30 days
+                        written notice. Client remains responsible for payment
+                        of services rendered up to termination date.
+                    </p>
                 </div>
-                <div class="signature-box">
-                    <h4>Client</h4>
-                    <div class="signature-line"></div>
-                    <p>Authorized Representative Signature</p>
-                    <p>Name: _________________________</p>
-                    <p>Title: _________________________</p>
-                    <p>Date: _________________________</p>
+
+                <div class="terms-section">
+                    <h4>Intellectual Property</h4>
+                    <p>
+                        All content created specifically for the client becomes
+                        client property upon final payment. NexiFront retains
+                        rights to methodologies, tools, and general marketing
+                        strategies.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="icon"></span>
+                    Agreement Signatures
+                </h2>
+                <div class="signature-section">
+                    <div class="signature-box">
+                        <h4>NexiFront Digital Solutions</h4>
+                        <div class="signature-line"></div>
+                        <p>Authorized Representative Signature</p>
+                        <p>Name: _________________________</p>
+                        <p>Title: _________________________</p>
+                        <p>Date: _________________________</p>
+                    </div>
+                    <div class="signature-box">
+                        <h4>Client</h4>
+                        <div class="signature-line"></div>
+                        <p>Authorized Representative Signature</p>
+                        <p>Name: _________________________</p>
+                        <p>Title: _________________________</p>
+                        <p>Date: _________________________</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
